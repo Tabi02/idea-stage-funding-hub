@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tabi02.github.io/idea-stage-funding-hub/sitemap.xml
