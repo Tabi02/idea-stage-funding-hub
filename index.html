@@ -1,0 +1,1643 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="A worldwide directory of funding programs that back founders at the idea stage — no product, no revenue, no company required. Accelerators, grants, pre-seed funds and competitions from every region including India, plus a dated archive of closed programs and a scam watchlist. Researched 18 Oct 2026." />
+    <link rel="icon" href="data:," />
+    <title>Idea Stage Funding Hub — Funding for founders with just an idea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f4ee;
+        --surface: #fffdf8;
+        --surface-2: #efeadf;
+        --ink: #182420;
+        --muted: #5d6c63;
+        --faint: #849186;
+        --line: #ddd7c8;
+        --accent: #0b6b4a;
+        --accent-deep: #084c34;
+        --accent-tint: #e2efe7;
+        --amber: #9a6206;
+        --amber-tint: #f7ecd4;
+        --red: #a93226;
+        --red-tint: #f9e6e2;
+        --ad-bg: #efece2;
+        --shadow: 0 1px 2px rgba(24, 36, 32, 0.05), 0 8px 24px -16px rgba(24, 36, 32, 0.25);
+        --radius: 14px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1411;
+          --surface: #15201b;
+          --surface-2: #1b2922;
+          --ink: #e9ede9;
+          --muted: #a3b3a8;
+          --faint: #74857a;
+          --line: #2a3a31;
+          --accent: #3ec98d;
+          --accent-deep: #7fe0b2;
+          --accent-tint: #173327;
+          --amber: #e2a94e;
+          --amber-tint: #33270f;
+          --red: #e87a6c;
+          --red-tint: #3a1d18;
+          --ad-bg: #131e18;
+          --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px -18px rgba(0, 0, 0, 0.7);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition: none !important; animation: none !important; }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--accent); }
+      :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+      .wrap { max-width: 1220px; margin: 0 auto; padding: 0 20px; }
+
+      /* ---------- header ---------- */
+      header.site {
+        position: sticky; top: 0; z-index: 40;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .site-row { display: flex; align-items: center; gap: 18px; padding: 12px 0; flex-wrap: wrap; }
+      .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+      .brand-mark {
+        width: 34px; height: 34px; border-radius: 9px; flex: none;
+        background: var(--accent); color: #fff;
+        display: grid; place-items: center;
+        font-family: "IBM Plex Serif", serif; font-weight: 700; font-size: 19px;
+      }
+      @media (prefers-color-scheme: dark) { .brand-mark { color: #0d1411; } }
+      .brand-name { font-family: "IBM Plex Serif", serif; font-weight: 700; font-size: 19px; letter-spacing: -0.01em; line-height: 1.1; }
+      .brand-sub { font-size: 11.5px; color: var(--muted); font-family: "IBM Plex Mono", monospace; }
+      nav.site-nav { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
+      nav.site-nav a {
+        color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500;
+        padding: 7px 11px; border-radius: 8px;
+      }
+      nav.site-nav a:hover { background: var(--surface-2); }
+
+      /* ---------- hero ---------- */
+      .hero { padding: 44px 0 8px; }
+      .hero h1 {
+        font-family: "IBM Plex Serif", serif; font-weight: 700;
+        font-size: clamp(30px, 5.2vw, 52px); line-height: 1.08; letter-spacing: -0.015em;
+        margin: 0 0 14px; max-width: 19ch;
+      }
+      .hero h1 em { font-style: normal; color: var(--accent); }
+      .hero p.lede { font-size: clamp(16px, 2vw, 19px); color: var(--muted); max-width: 62ch; margin: 0 0 22px; }
+      .hero-stats { display: flex; gap: 28px; flex-wrap: wrap; margin: 0 0 6px; }
+      .stat b { font-family: "IBM Plex Serif", serif; font-size: 30px; font-weight: 700; display: block; line-height: 1; }
+      .stat span { font-size: 12.5px; color: var(--muted); font-family: "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: 0.06em; }
+      .stamp { font-size: 13px; color: var(--faint); margin-top: 14px; }
+      .stamp b { color: var(--muted); font-weight: 600; }
+
+      /* ---------- ad slots ---------- */
+      .ad-slot {
+        background: var(--ad-bg);
+        border: 1.5px dashed var(--line);
+        border-radius: var(--radius);
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        gap: 4px; text-align: center; padding: 14px; overflow: hidden;
+      }
+      .ad-slot .ad-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--faint); }
+      .ad-slot .ad-note { font-size: 12.5px; color: var(--faint); }
+      .ad-leaderboard { min-height: 110px; margin: 26px 0 6px; }
+      .ad-rail { min-height: 280px; }
+      .ad-infeed { min-height: 180px; height: 100%; }
+      .ad-footer { min-height: 110px; margin: 8px 0 30px; }
+      .ad-slot ins.adsbygoogle { width: 100%; }
+
+      /* ---------- deadline strip ---------- */
+      .deadlines { padding: 26px 0 4px; }
+      .section-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 14px; flex-wrap: wrap; }
+      .section-head h2 { font-family: "IBM Plex Serif", serif; font-size: 24px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+      .section-head p { margin: 0; color: var(--muted); font-size: 14px; }
+      .dl-row { display: flex; flex-wrap: wrap; gap: 10px; }
+      .dl-chip {
+        display: flex; align-items: center; gap: 10px;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+        padding: 7px 14px 7px 8px; font-size: 14px; box-shadow: var(--shadow);
+      }
+      .dl-chip .when {
+        font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600;
+        background: var(--amber-tint); color: var(--amber);
+        padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+      }
+      .dl-chip .days { color: var(--faint); font-size: 12.5px; font-family: "IBM Plex Mono", monospace; white-space: nowrap; }
+      .dl-chip.urgent .when { background: var(--red-tint); color: var(--red); }
+
+      /* ---------- layout ---------- */
+      .layout { display: grid; grid-template-columns: 1fr; gap: 30px; padding: 18px 0 10px; align-items: start; }
+      @media (min-width: 1024px) { .layout { grid-template-columns: minmax(0, 1fr) 302px; } }
+      aside.rail { display: flex; flex-direction: column; gap: 18px; }
+      @media (min-width: 1024px) { aside.rail { position: sticky; top: 76px; } }
+      .rail-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+      .rail-card h3 { font-family: "IBM Plex Serif", serif; font-size: 17px; margin: 0 0 10px; }
+      .rail-card p, .rail-card li { font-size: 14px; color: var(--muted); }
+      .rail-card ul { margin: 0; padding-left: 18px; display: grid; gap: 7px; }
+      .rail-card.warn { border-color: color-mix(in srgb, var(--red) 45%, var(--line)); background: color-mix(in srgb, var(--red-tint) 55%, var(--surface)); }
+      .rail-card.warn h3 { color: var(--red); }
+      .rail-card.warn p { color: var(--ink); font-size: 14px; margin: 0 0 8px; }
+      .rail-card.warn p:last-child { margin-bottom: 0; }
+
+      /* ---------- filters ---------- */
+      .filters {
+        position: sticky; top: 59px; z-index: 30;
+        background: color-mix(in srgb, var(--bg) 92%, transparent);
+        backdrop-filter: blur(10px);
+        padding: 12px 0; border-bottom: 1px solid var(--line);
+        display: flex; flex-direction: column; gap: 10px;
+      }
+      .seg { display: flex; gap: 6px; flex-wrap: wrap; }
+      .seg button, .chip {
+        font: inherit; font-size: 13.5px; font-weight: 500; cursor: pointer;
+        background: var(--surface); color: var(--ink);
+        border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
+        transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+      }
+      .seg button:hover, .chip:hover { border-color: var(--faint); }
+      .seg button[aria-pressed="true"], .chip[aria-pressed="true"] {
+        background: var(--accent); border-color: var(--accent); color: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        .seg button[aria-pressed="true"], .chip[aria-pressed="true"] { color: #0d1411; }
+      }
+      .seg button .n { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; opacity: 0.75; margin-left: 4px; }
+      .filter-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+      .filter-row .lbl { font-size: 12px; font-family: "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: 0.07em; color: var(--faint); margin-right: 2px; }
+      .search-box { flex: 1 1 220px; display: flex; }
+      .search-box input {
+        font: inherit; font-size: 14.5px; width: 100%;
+        background: var(--surface); color: var(--ink);
+        border: 1px solid var(--line); border-radius: 10px; padding: 9px 13px;
+      }
+      .search-box input::placeholder { color: var(--faint); }
+      select.sort {
+        font: inherit; font-size: 14px; background: var(--surface); color: var(--ink);
+        border: 1px solid var(--line); border-radius: 10px; padding: 9px 10px; cursor: pointer;
+      }
+      .result-count { font-size: 13.5px; color: var(--muted); font-family: "IBM Plex Mono", monospace; }
+
+      /* ---------- cards ---------- */
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 16px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 20px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow);
+      }
+      .card-top { display: flex; align-items: flex-start; gap: 10px; }
+      .card h3 { font-family: "IBM Plex Serif", serif; font-size: 20px; font-weight: 700; margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
+      .status-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; margin-top: 8px; }
+      .status-dot.open { background: var(--accent); }
+      .status-dot.watch { background: var(--amber); }
+      .status-dot.out { background: var(--red); }
+      .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+      .tag {
+        font-size: 11.5px; font-weight: 600; font-family: "IBM Plex Mono", monospace;
+        background: var(--surface-2); color: var(--muted);
+        padding: 3px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.04em;
+      }
+      .tag.noequity { background: var(--accent-tint); color: var(--accent-deep); }
+      .amount { font-family: "IBM Plex Serif", serif; font-size: 25px; font-weight: 700; line-height: 1.15; color: var(--ink); }
+      .amount small { display: block; font-family: "IBM Plex Sans", sans-serif; font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 3px; }
+      .quote {
+        font-size: 14px; color: var(--muted); font-style: italic;
+        border-left: 3px solid var(--accent-tint); padding-left: 11px; margin: 0;
+      }
+      .meta { display: grid; gap: 6px; font-size: 14px; }
+      .meta .row { display: flex; gap: 8px; }
+      .meta .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); flex: none; width: 74px; padding-top: 2px; }
+      .meta .v { color: var(--ink); }
+      .meta .v.catch { color: var(--muted); }
+      .dl-badge { font-weight: 600; }
+      .dl-badge.soon { color: var(--red); }
+      .card-foot { margin-top: auto; padding-top: 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+      .verify { font-size: 11px; font-family: "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+      .verify::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+      .verify.second { color: var(--amber); }
+      .verify.second::before { background: var(--amber); }
+      .apply-btn {
+        margin-left: auto; text-decoration: none; font-weight: 600; font-size: 14px;
+        background: var(--accent); color: #fff; padding: 9px 16px; border-radius: 9px;
+        transition: background 0.15s ease;
+      }
+      @media (prefers-color-scheme: dark) { .apply-btn { color: #0d1411; } }
+      .apply-btn:hover { background: var(--accent-deep); }
+      @media (prefers-color-scheme: dark) { .apply-btn:hover { background: var(--accent); filter: brightness(1.1); } }
+      .no-link { margin-left: auto; font-size: 13px; color: var(--faint); font-style: italic; }
+      .card.is-out { opacity: 0.82; }
+      .empty-state {
+        grid-column: 1 / -1; text-align: center; padding: 44px 20px;
+        background: var(--surface); border: 1px dashed var(--line); border-radius: var(--radius);
+        color: var(--muted);
+      }
+      .empty-state b { color: var(--ink); display: block; font-family: "IBM Plex Serif", serif; font-size: 19px; margin-bottom: 6px; }
+
+      /* ---------- sections ---------- */
+      section.block { padding: 34px 0 6px; }
+      .two-col { display: grid; gap: 16px; }
+      @media (min-width: 760px) { .two-col { grid-template-columns: 1fr 1fr; } }
+      .info-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+      .info-card h3 { font-family: "IBM Plex Serif", serif; font-size: 19px; margin: 0 0 10px; }
+      .info-card p { margin: 0 0 10px; font-size: 15px; color: var(--muted); }
+      .info-card p:last-child { margin-bottom: 0; }
+      .info-card p b { color: var(--ink); }
+
+      .status-dot.closed { background: var(--faint); }
+      .tag.closedtag { background: var(--red-tint); color: var(--red); }
+      .verify.low { color: var(--red); }
+      .verify.low::before { background: var(--red); }
+      .apply-btn.dead { background: var(--surface-2); color: var(--muted); }
+      .apply-btn.dead:hover { background: var(--surface-2); filter: brightness(0.97); }
+      .card.is-closed { opacity: 0.85; }
+
+      /* ---------- avoid / scam cards ---------- */
+      .info-card.avoid { border-color: color-mix(in srgb, var(--red) 45%, var(--line)); }
+      .info-card.avoid h3 { color: var(--red); }
+      .info-card .avoid-tag {
+        display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+        letter-spacing: 0.14em; text-transform: uppercase; color: var(--red);
+        background: var(--red-tint); border-radius: 6px; padding: 3px 8px; margin-bottom: 10px;
+      }
+
+      /* ---------- apply ad interstitial ---------- */
+      .gate-overlay {
+        position: fixed; inset: 0; z-index: 90; padding: 18px;
+        background: rgba(10, 17, 13, 0.58);
+        display: grid; place-items: center; overflow-y: auto;
+      }
+      .gate-overlay[hidden] { display: none; }
+      .gate-card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+        max-width: 580px; width: 100%; padding: 22px; box-shadow: var(--shadow);
+      }
+      .gate-top { display: flex; align-items: flex-start; gap: 12px; }
+      .gate-top h3 { font-family: "IBM Plex Serif", serif; font-size: 21px; margin: 0; line-height: 1.25; }
+      .gate-x {
+        margin-left: auto; flex: none; font: inherit; font-size: 20px; line-height: 1; cursor: pointer;
+        background: var(--surface-2); color: var(--ink); border: 1px solid var(--line);
+        border-radius: 8px; width: 34px; height: 34px;
+      }
+      .gate-sub { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
+      .gate-ad { min-height: 250px; margin: 16px 0; }
+      .gate-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+      .gate-actions .apply-btn { margin-left: auto; }
+      .apply-btn.is-disabled { opacity: 0.55; pointer-events: none; }
+
+      footer.site { border-top: 1px solid var(--line); margin-top: 40px; padding: 26px 0 40px; }
+      footer.site p { font-size: 13.5px; color: var(--muted); margin: 0 0 8px; max-width: 78ch; }
+      footer.site .fine { color: var(--faint); font-size: 12.5px; }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap site-row">
+        <a class="brand" href="#top">
+          <span class="brand-mark">$</span>
+          <span>
+            <span class="brand-name">Idea Stage Funding Hub</span><br />
+            <span class="brand-sub">FUNDING BEFORE YOU HAVE A PRODUCT</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Sections">
+          <a href="#programs">Programs</a>
+          <a href="#deadlines">Deadlines</a>
+          <a href="#watchlist">Watch list</a>
+          <a href="#ruledout">Ruled out</a>
+          <a href="#closed">Closed</a>
+          <a href="#avoid">Scams to avoid</a>
+          <a href="#staysafe">Stay safe</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap" id="top">
+      <section class="hero">
+        <h1>Money for founders who <em>only have an idea.</em></h1>
+        <p class="lede">
+          The programs in this directory fund founders before product, revenue or
+          incorporation — accelerators, equity-free grants, pre-seed funds and pitch competitions
+          from every region of the world, India included. Programs that don't fit yet are listed too,
+          on the watch list and in “ruled out”, with the reason on the card — and programs that have
+          closed stay on as a dated historical archive, next to a scam watchlist. Each listing carries
+          its check size and deadline where the program publishes them, the catch, and a badge
+          showing whether the details were confirmed on the program's own site.
+        </p>
+        <div class="hero-stats">
+          <div class="stat"><b id="stat-total">–</b><span>programs tracked</span></div>
+          <div class="stat"><b id="stat-open">–</b><span>open right now</span></div>
+          <div class="stat"><b id="stat-noequity">–</b><span>take no equity</span></div>
+          <div class="stat"><b id="stat-watch">–</b><span>on the watch list</span></div>
+          <div class="stat"><b id="stat-closed">–</b><span>closed / historical</span></div>
+        </div>
+        <p class="stamp">Researched <b>18 October 2026</b> · Worldwide, India included · Closed programs kept as a dated archive · Deadlines and terms change — always re-check the official page before you apply.</p>
+      </section>
+
+      <!-- AD SLOT: leaderboard (below hero) -->
+      <div class="ad-slot ad-leaderboard" data-ad-slot="leaderboard" role="complementary" aria-label="Advertisement">
+        <span class="ad-label">Advertisement</span>
+        <span class="ad-note">Your ad here — 728 × 90 leaderboard</span>
+      </div>
+
+      <section class="deadlines" id="deadlines">
+        <div class="section-head">
+          <h2>Deadline calendar</h2>
+          <p>Dated application windows from the listings below, soonest first.</p>
+        </div>
+        <div class="dl-row" id="dl-row"></div>
+      </section>
+
+      <div class="layout">
+        <div>
+          <div class="filters" id="programs">
+            <div class="seg" role="group" aria-label="Filter by status">
+              <button type="button" data-status="all" aria-pressed="true">All<span class="n" data-count="all"></span></button>
+              <button type="button" data-status="open" aria-pressed="false">Open now<span class="n" data-count="open"></span></button>
+              <button type="button" data-status="watch" aria-pressed="false">Watch list<span class="n" data-count="watch"></span></button>
+              <button type="button" data-status="out" aria-pressed="false">Ruled out<span class="n" data-count="out"></span></button>
+              <button type="button" data-status="closed" aria-pressed="false">Closed<span class="n" data-count="closed"></span></button>
+            </div>
+            <div class="filter-row">
+              <span class="lbl">Type</span>
+              <span id="type-chips" style="display:contents"></span>
+            </div>
+            <div class="filter-row">
+              <div class="search-box">
+                <input type="search" id="search" placeholder="Search programs, places, terms…" aria-label="Search programs" />
+              </div>
+              <button type="button" class="chip" id="noequity-toggle" aria-pressed="false">No equity only</button>
+              <select class="sort" id="sort" aria-label="Sort programs">
+                <option value="deadline">Sort: deadline soonest</option>
+                <option value="amount">Sort: biggest check</option>
+                <option value="name">Sort: name A–Z</option>
+              </select>
+            </div>
+            <div class="result-count" id="result-count" aria-live="polite"></div>
+          </div>
+
+          <div style="height:16px"></div>
+          <div class="grid" id="grid"></div>
+
+          <section class="block" id="avoid">
+            <div class="section-head">
+              <h2>Avoid: scams &amp; fake funding programs</h2>
+              <p>Documented traps that imitate idea-stage funding. If an offer matches one of these patterns, walk away.</p>
+            </div>
+            <div class="two-col">
+              <div class="info-card avoid">
+                <span class="avoid-tag">Avoid · documented scam</span>
+                <h3>World Startup Convention (India, 2023)</h3>
+                <p>Billed as the “world's biggest funding festival” with fake headliners — Elon Musk, Sundar Pichai, Masayoshi Son, Nitin Gadkari. Tickets cost <b>₹6,000–₹8,000+</b> (reports go up to ₹25,000; sponsors paid lakhs).</p>
+                <p>No promised guest or investor appeared. 500+ attendees protested, and Gautam Budh Nagar police booked the organisers. A funding event that sells tickets on celebrity names is selling tickets, not funding.</p>
+              </div>
+              <div class="info-card avoid">
+                <span class="avoid-tag">Avoid · fee scam</span>
+                <h3>Fake investors demanding a “due diligence fee”</h3>
+                <p>A slick “VC” or “angel network” promises a large investment — say ₹2 crore — then demands <b>₹45,000–₹50,000</b> as a “due diligence fee”, “processing fee” or a “valuation report from an authorised vendor” before releasing funds.</p>
+                <p>The rule is absolute: <b>real investors never ask you for money before funds are in your account.</b> The fee is the product; the investment does not exist.</p>
+              </div>
+              <div class="info-card avoid">
+                <span class="avoid-tag">Avoid · impersonation</span>
+                <h3>“Drexel Morgan” fake family office</h3>
+                <p>Cold DMs from people posing as representatives of a family office called Drexel Morgan. The script ends at a “processing” or documentation fee — and can escalate to luring founders to in-person meetings abroad.</p>
+                <p>Delete, do not engage, and never travel or pay on the strength of a cold approach from an unverifiable “family office”.</p>
+              </div>
+              <div class="info-card avoid">
+                <span class="avoid-tag">Avoid · impersonation</span>
+                <h3>Fake Tony Elumelu Foundation application fees</h3>
+                <p>The Tony Elumelu Foundation Entrepreneurship Programme (listed in the directory) has <b>never charged an application fee</b> — applications are free, on TEFConnect only.</p>
+                <p>Anyone requesting payment to “apply”, “register” or “unlock” a TEF grant is running a fraud in the foundation's name.</p>
+              </div>
+              <div class="info-card avoid">
+                <span class="avoid-tag">Avoid · pay-to-pitch</span>
+                <h3>“Accelerators” that charge you to pitch</h3>
+                <p>A recurring wave — reported across Latin America and beyond — of fake accelerators promising a pitch in front of top VCs at an exclusive demo day, in exchange for an upfront “application”, “coaching” or “sponsorship” fee.</p>
+                <p>Red flags: VC logos used without permission, fabricated testimonials, high-pressure payment deadlines, and no transparency about which investors actually attend or what diligence happens.</p>
+              </div>
+              <div class="info-card avoid">
+                <span class="avoid-tag">Not scams · but not free</span>
+                <h3>Legitimate programs that do charge</h3>
+                <p>Two real, long-running programs in this directory charge founders — disclosed here and on their cards so there are no surprises: <b>Founder Institute</b> (course fee of $399–$699 plus a 2.5% warrant, and it invests nothing) and <b>Gritworks NZ</b> (NZD $1,000 upfront).</p>
+                <p>Paying a disclosed course fee to a real program is a choice; paying an “application fee” to anyone else is a scam.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="block" id="staysafe">
+            <div class="section-head">
+              <h2>Stay safe: fees &amp; dead programs</h2>
+            </div>
+            <div class="two-col">
+              <div class="info-card">
+                <h3>No legit program charges you to apply</h3>
+                <p>Across the 100+ programs researched here, <b>almost none charges applicants anything</b>. Legitimate accelerators and funds make money from equity or not at all — never from application fees.</p>
+                <p>The disclosed exceptions are flagged on their cards: <b>Founder Institute</b> charges a course fee ($399–$699 plus a 2.5% warrant) and <b>Gritworks NZ</b> charges NZD $1,000 upfront — both real programs, but you pay before any funding. <b>TinySeed</b> deducts a fee only <b>after</b> acceptance, from its investment. Anyone else demanding an “application”, “due diligence” or “processing” fee is running a scam — see the list above.</p>
+              </div>
+              <div class="info-card">
+                <h3>Pioneer.app is shut down</h3>
+                <p>Pioneer's own site states it <b>stopped making new investments in 2024</b>, yet aggregator listings still show it as open. Those listings are stale.</p>
+                <p>Anyone soliciting applications or fees in Pioneer's name is working from stale listings at best. Don't confuse it with <b>Pioneer Fund</b>, a separate, live YC-alumni fund listed in the watch list.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="block">
+            <div class="section-head">
+              <h2>How to read this directory</h2>
+            </div>
+            <div class="two-col">
+              <div class="info-card">
+                <h3>“Official site” vs “second-hand”</h3>
+                <p>Every card is badged. <b>Official site</b> means the details were read on the program's own website. <b>Second-hand</b> means they come from news, aggregators or blogs — treat the numbers as a lead and verify on the official page before relying on them. A red <b>low verification</b> badge means the sourcing was thin: amounts, dates — sometimes even whether the program still runs — need re-checking before you rely on them.</p>
+                <p>Where a deadline or intake couldn't be confirmed at all, the card says so plainly instead of guessing.</p>
+              </div>
+              <div class="info-card">
+                <h3>Who this list was built for</h3>
+                <p>A solo technical founder, based in India, with no registered company, no revenue and no users — building an AI business-management SaaS and an AI adaptive-learning (EdTech) platform.</p>
+                <p>Programs that require revenue, a launched product, an MVP, local residency in another region, or student status are in <b>Ruled out</b> with the reason on the card — useful again once your stage changes.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="rail">
+          <!-- AD SLOT: sidebar rail -->
+          <div class="ad-slot ad-rail" data-ad-slot="rail" role="complementary" aria-label="Advertisement">
+            <span class="ad-label">Advertisement</span>
+            <span class="ad-note">Your ad here — 300 × 250</span>
+          </div>
+
+          <div class="rail-card">
+            <h3>Before you apply</h3>
+            <ul>
+              <li>Re-check the deadline on the official page — windows close early when cohorts fill.</li>
+              <li>Read the “catch” on each card: relocation, in-person residencies and team requirements rule out more founders than idea quality does.</li>
+              <li>Prefer a warm intro where a fund has no public application portal.</li>
+              <li>Keep one tight 1,500-word version of your idea — several grant programs ask for exactly that.</li>
+            </ul>
+          </div>
+
+          <div class="rail-card warn">
+            <h3>Quick scam check</h3>
+            <p><b>Application fee requested?</b> Almost certainly a scam — the only fee-chargers in this directory (Founder Institute, Gritworks NZ) are disclosed on their listings.</p>
+            <p><b>“Guaranteed funding”?</b> No real fund guarantees outcomes before diligence.</p>
+            <p><b>Old listing, dead program?</b> Pioneer.app shut down in 2024 — stale listings still circulate.</p>
+          </div>
+
+          <div class="rail-card">
+            <h3>Best first moves</h3>
+            <ul>
+              <li><b>Y Combinator W27</b> — biggest check, hard deadline 2 Nov 2026.</li>
+              <li><b>Emergent Ventures</b> — rolling, equity-free, has an India-focused track.</li>
+              <li><b>Hello Tomorrow</b> — free, no equity, has a dedicated idea-stage prize; deadline 30 Nov 2026.</li>
+              <li><b>Oraseya Launchpad (Dubai)</b> — equity-free residency that takes solo idea-stage founders.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <!-- AD SLOT: footer -->
+      <div class="ad-slot ad-footer" data-ad-slot="footer" role="complementary" aria-label="Advertisement">
+        <span class="ad-label">Advertisement</span>
+        <span class="ad-note">Your ad here — 728 × 90 leaderboard</span>
+      </div>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <p><b>Idea Stage Funding Hub</b> — a research directory of idea-stage funding programs. All program details were compiled on 18 October 2026 from official program websites and secondary sources, as badged on each card. Amounts, deadlines and eligibility change without notice; the official application page is the final word.</p>
+        <p class="fine">This site is an independent directory and is not affiliated with any program listed. Never pay an application fee to any program or intermediary.</p>
+      </div>
+    </footer>
+
+    <!-- APPLY INTERSTITIAL: ad first, then the official site -->
+    <div class="gate-overlay" id="gate" hidden>
+      <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gate-h">
+        <div class="gate-top">
+          <h3 id="gate-h">Heading to <span id="gate-name">the official site</span></h3>
+          <button type="button" class="gate-x" id="gate-close" aria-label="Cancel and stay on this page">×</button>
+        </div>
+        <p class="gate-sub">This directory is free and ad-supported, so a short ad break comes first — then the program's official application page opens in a new tab.</p>
+        <div class="ad-slot gate-ad" data-ad-slot="interstitial" role="complementary" aria-label="Advertisement">
+          <span class="ad-label">Advertisement</span>
+          <span class="ad-note">Your ad here — interstitial</span>
+        </div>
+        <div class="gate-actions">
+          <button type="button" class="chip" id="gate-cancel">Stay on this page</button>
+          <a class="apply-btn is-disabled" id="gate-go" href="#" target="_blank" rel="noopener" aria-disabled="true">Continue in 5s…</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* ================================================================
+         ADSENSE — to switch on real ads:
+         1. Get approved at google.com/adsense and copy your publisher ID
+            (it looks like  ca-pub-1234567890123456 ).
+         2. Paste it between the quotes below.
+         Every ad slot on the page then loads live AdSense ads
+         automatically. Until then, slots show as reserved ad space.
+         ================================================================ */
+      var ADSENSE_PUBLISHER_ID = ""; /* <-- paste ca-pub-XXXXXXXXXXXXXXXX here */
+
+      /* Program data — compiled 18 Oct 2026 from the research report.
+         verify: "official" = read on the program's own site;
+                 "second"   = news / aggregator / blog (verify before applying).
+         deadlineISO: real dated deadline used for countdowns, else null. */
+      var PROGRAMS = [
+        /* ---------------- OPEN NOW ---------------- */
+        { name: "Y Combinator — Winter 2027", status: "open", type: "Accelerator", region: "USA · San Francisco",
+          amount: "$500,000", amountNote: "$125K for 7% equity + $375K uncapped MFN SAFE",
+          quote: "YC accepts companies from idea to early traction; international founders are welcome.",
+          deadline: "2 Nov 2026, 8pm PT", deadlineISO: "2026-11-02",
+          catch: "7% equity · full-time · batch runs in person in San Francisco, Jan–Mar 2027. Late applications are still reviewed; decisions by 11 Dec 2026.",
+          verify: "official", url: "https://www.ycombinator.com/apply", sortAmt: 500000 },
+        { name: "Emergent Ventures (Mercatus Center)", status: "open", type: "Grant", region: "Global · rolling",
+          amount: "~$10K–$20K typical", amountNote: "Equity-free grant · no fixed amount, no required business model",
+          quote: "Supports “zero to one” ideas — with dedicated support for projects focused on India, Africa and the Caribbean, or Ukraine.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Philanthropic grant, not an investment — a path to revenue self-sufficiency is a plus. Application is a ~1,500-word proposal. Only eligibility line: age 13+.",
+          verify: "official", url: "https://www.mercatus.org/emergentventures", sortAmt: 20000, noEquity: true },
+        { name: "Hello Tomorrow Global Challenge", status: "open", type: "Competition", region: "Global · finals Amsterdam",
+          amount: "€200,000 grand prize", amountNote: "Equity investment prize · application free · no equity taken to enter",
+          quote: "“Are you an early-stage founder at the idea or pre-seed stage? It's never too early to apply!” — with a dedicated Spinout Breakthroughs prize for idea-stage founders.",
+          deadline: "30 Nov 2026", deadlineISO: "2026-11-30",
+          catch: "Deep-tech / science-based focus only — an AI learning platform can fit if positioned as deep AI; a conventional SaaS likely won't. Finals 2–3 Jun 2027, Amsterdam.",
+          verify: "official", url: "https://hello-tomorrow.org/global-challenge/", sortAmt: 215000, noEquity: true },
+        { name: "Afore Alpha (Afore Capital)", status: "open", type: "Pre-seed fund", region: "Global · fund based in SF",
+          amount: "~$1M", amountNote: "Standard deal reported as $1M via a $10M post-money SAFE (10%) — terms second-hand",
+          quote: "“No startup is too early for us… your company may still be an idea; it doesn't need to be incorporated.” Open to companies “anywhere in the world.”",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Dilutive (10% at Alpha terms). Also runs a 2-month in-person Founders-in-Residence in SF. Check size from TechCrunch reporting; eligibility confirmed on Afore's own site.",
+          verify: "official", url: "https://www.afore.vc/afore-alpha", sortAmt: 1000000 },
+        { name: "Antler", status: "open", type: "Residency + VC", region: "Singapore · Tokyo · Seoul + more",
+          amount: "$150,000 for 10%", amountNote: "Singapore terms: $100K for 10% equity + $50K uncapped SAFE · up to $400K at inception",
+          quote: "“Antler invests at the pre-seed (inception) stage — before founders have a product, co-founder, or customers.”",
+          deadline: "Rolling — next cohorts: Tokyo 2 Nov 2026; Seoul Mar 2027; Singapore next cohort open", deadlineISO: null,
+          catch: "In-person residency (6 weeks). Hubs include Singapore, Tokyo and Seoul — and India-based founders have their own route: see the separate Antler India — ARC listing. Singapore tells individuals still exploring ideas not to apply yet. No participation fee.",
+          verify: "official", url: "https://www.antler.co/apply", sortAmt: 150000 },
+        { name: "Entrepreneur First", status: "open", type: "Company builder", region: "London · San Francisco",
+          amount: "Grant + up to $250K", amountNote: "Equity-free grant during ideation; up to $250K investment once a company forms (terms second-hand)",
+          quote: "“You might have an early idea, or be testing a cofounder. You might have nothing. What we're most interested in is you and your potential.”",
+          deadline: "SF Bridge Residency Winter 2027: apply now · London Spring 2027: register interest", deadlineISO: null,
+          catch: "Full-time and in-person — you relocate to the hub city (visa needed). Bangalore Fall 2026 cohort is closed. Investment terms come from secondary reporting, not EF's site.",
+          verify: "official", url: "https://apply.joinef.com", sortAmt: 250000 },
+        { name: "South Park Commons — Residency", status: "open", type: "Residency", region: "SF · NYC · Bangalore",
+          amount: "Free — no cost, no equity", amountNote: "6-month residency · separate funding track writes $1M–$10M first checks",
+          quote: "“Our members range from pre-idea to pre-launch.” The residency is for ideation & exploration among technical founders.",
+          deadline: "Rolling admissions", deadlineISO: null,
+          catch: "Selective and technical-heavy. Has a Bangalore office — no relocation needed for the residency. The funded Founder Fellowship (Fall 2026) has closed; next cycle not yet announced.",
+          verify: "official", url: "https://southparkcommons.com/", sortAmt: 0, noEquity: true },
+        { name: "Oraseya Launchpad (Dubai)", status: "open", type: "Residency", region: "UAE · Dubai",
+          amount: "Equity-free · no cash", amountNote: "Not an investment program — $500K+ in software credits & perks, 6 months workspace, fast-track to the SANDBOX investment program",
+          quote: "“Launchpad accepts stellar founders from idea-stage to pre-Seed stage.” FAQ: no idea or MVP yet? “Absolutely!” you can still apply.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "6-month in-person residency in Dubai. Solo founders OK; priority to founders with a clear nexus to the UAE, but outside-UAE founders can apply. No fees.",
+          verify: "official", url: "https://www.launchpaddubai.com/", sortAmt: 0, noEquity: true },
+        { name: "1517 Fund — Medici Project", status: "open", type: "Micro-grant", region: "Global",
+          amount: "$1,000+", amountNote: "No-strings cash grant — “we don't own you, your project, any IP generated, future equity in anything”",
+          quote: "“This isn't money for what you've done, it's not an award, it's a stipend towards your future potential.”",
+          deadline: "Rolling — no formal application; reach out", deadlineISO: null,
+          catch: "Aimed at young makers, students and dropouts. Small checks — best as a first signal, not runway. 1517 also runs a pre-seed fund behind the grants.",
+          verify: "official", url: "https://www.1517fund.com/post/1517-medici-project", sortAmt: 1000, noEquity: true },
+        { name: "Techstars", status: "open", type: "Accelerator", region: "Global · many cities",
+          amount: "~$120K+", amountNote: "Standard deal ~6% via convertible note / MFN (reported up to $220K in London) — second-hand",
+          quote: "Techstars accepts pre-revenue teams; its free Founder Catalyst pre-accelerator (10 weeks, virtual, no equity) has no India cohort.",
+          deadline: "Apply by 18 Nov 2026 for Anywhere, Boston, Chicago, London, NYC & more", deadlineISO: "2026-11-18",
+          catch: "Equity taken; teams preferred over solo founders. The 18 Nov date comes from Techstars' Sept 2026 update via secondary sources — confirm on the specific program page.",
+          verify: "second", url: "https://www.techstars.com/apply", sortAmt: 120000 },
+        { name: "Startup World Cup 2027 — Regionals", status: "open", type: "Competition", region: "Global regionals · finale San Francisco",
+          amount: "$1,000,000", amountNote: "Investment grand prize at the SF finale — investment, not cash",
+          quote: "Any startup can apply to a regional round; early-stage and idea-stage teams regularly compete.",
+          deadline: "Regional applications open now (e.g. SouthWest 2027)", deadlineISO: null,
+          catch: "You compete region by region; finalists travel to the San Francisco finale. Details second-hand — check the regional page for your nearest round.",
+          verify: "second", url: "https://startupworldcup.io", sortAmt: 1000000 },
+        { name: "O'Shaughnessy Fellowships & Grants", status: "open", type: "Fellowship / Grant", region: "Global · any country",
+          amount: "$100K / $10K", amountNote: "$100K fellowships and $10K grants · equity-free · any age",
+          quote: "Fellowships and grants for builders working in the open, from any country.",
+          deadline: "Rolling (verify current round)", deadlineISO: null,
+          catch: "Discovery is driven by your public work — a visible body of work matters more than a deck. Current-round status is second-hand; verify at osh.fund.",
+          verify: "second", url: "https://osh.fund", sortAmt: 100000, noEquity: true },
+        { name: "Thiel Fellowship", status: "open", type: "Fellowship", region: "Global",
+          amount: "$250,000", amountNote: "Over two years · equity-free · no company or finished product needed",
+          quote: "“You don't need to have a registered company… you don't even need a finished product — apply with an idea, provided you can demonstrate meaningful progress toward a concrete vision.”",
+          deadline: "Applications year-round · one listing shows a 31 Dec 2026 deadline", deadlineISO: null,
+          catch: "Founders must be 22 or under, hold no university degree, drop out if enrolled, and work full-time on the project. Reality check: recent fellows often already had traction. Details second-hand.",
+          verify: "second", url: "https://thielfellowship.org", sortAmt: 250000, noEquity: true },
+        { name: "Z Fellows", status: "open", type: "Micro-fellowship", region: "Global · remote",
+          amount: "$10,000", amountNote: "Via a tiny SAFE at a $1B cap — described as “functionally free”",
+          quote: "A one-week micro-fellowship for technical builders at the earliest stage.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Very small, very fast — a signal and a network more than funding. Details second-hand; verify at zfellows.com.",
+          verify: "second", url: "https://zfellows.com", sortAmt: 10000 },
+        { name: "Iterative (Singapore)", status: "open", type: "Accelerator", region: "Singapore · Southeast Asia",
+          amount: "$150K–$500K", amountNote: "For 10–15% equity",
+          quote: "Applications open all year round for early-stage SEA-focused founders.",
+          deadline: "Open all year", deadlineISO: null,
+          catch: "Southeast-Asia focus — an India-based founder should expect a regional angle or presence. Terms second-hand (via Aspire's blog).",
+          verify: "second", url: "https://iterative.vc/apply", sortAmt: 500000 },
+        { name: "BLOCK71 — Global Startup Runway", status: "open", type: "Incubator", region: "Singapore",
+          amount: "Equity-free · 1 year", amountNote: "Incubation program — no equity taken",
+          quote: "A one-year runway program for early startups.",
+          deadline: "See program page", deadlineISO: null,
+          catch: "Focus areas: smart cities, health, Industry 4.0 and Web3 — fit matters. Details second-hand.",
+          verify: "second", url: "https://block71.co/", sortAmt: 0, noEquity: true },
+        { name: "in5 (Dubai)", status: "open", type: "Incubator", region: "UAE · Dubai",
+          amount: "No equity taken", amountNote: "Incubator with visa support · rolling intake",
+          quote: "Open to all nationalities, rolling applications.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Pre-Series A focus — less explicitly idea-stage than Oraseya. Details second-hand.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+
+        /* ---------------- WATCH LIST ---------------- */
+        { name: "Start-Up Chile — Build", status: "open", type: "Grant + accelerator", region: "Chile · Santiago",
+          amount: "~CLP 15M (~$15K)", amountNote: "Equity-free co-financing · 4-month idea→MVP track",
+          quote: "Build is the idea-stage track; solo founders are welcome and foreign founders get a 2-year work visa.",
+          deadline: "Calls run in cycles — BIG 12 announced May 2026; check the site for the current call", deadlineISO: null,
+          catch: "At least one founder must settle in Chile for the program, commit full-time and give back through social-impact activities. Build expects at least a validated concept — customer evidence, not a bare napkin sketch. Terms second-hand; program page is official.",
+          verify: "second", url: "https://startupchile.org/en/apply/", sortAmt: 15000, noEquity: true },
+        { name: "MassChallenge", anchor: "watchlist", status: "watch", type: "Accelerator", region: "Boston · Israel · Switzerland · Mexico · Texas",
+          amount: "$0 equity · prizes to $200K", amountNote: "Zero-equity; cash prizes up to $200K globally / CHF 1M in Switzerland",
+          quote: "Early-stage startups from anywhere in the world, under $1M raised and $2M revenue.",
+          deadline: "Switzerland 2027 expected to open ~15 Jan 2027; main 2027 dates unpublished", deadlineISO: "2027-01-15",
+          catch: "In-person 4-month programs; funding is prize-based, not guaranteed. Dates follow the prior year's pattern (second-hand) — check masschallenge.org/programs.",
+          verify: "second", url: "https://masschallenge.org", sortAmt: 200000, noEquity: true },
+        { name: "K-Startup Grand Challenge (Korea)", status: "watch", type: "Government program", region: "South Korea",
+          amount: "Equity-free stipend + prizes", amountNote: "Living stipend of KRW 12.25M (1-person team) / KRW 17.5M (2-person) for 3.5 months + free office, mentoring and a D-8-4 startup visa; top-team prizes historically up to KRW 135.6M",
+          quote: "South Korea's flagship program for foreign-led startups; the CEO must be non-Korean.",
+          deadline: "2026 round closed to applications (program runs to Apr 2027) · next round expected 2027", deadlineISO: null,
+          catch: "At least one member must relocate to Korea full-time; foreign-led teams only (CEO non-Korean); pre-Series A with revenue under $1M; tech focus (AI, IoT, biotech, fintech, greentech). Recent rounds drew 21,537 applicants from 100+ countries.",
+          verify: "second", url: "https://www.k-startup.go.kr", sortAmt: 0, noEquity: true },
+        { name: "GESAwards 2027 (EdTech)", status: "watch", type: "Competition", region: "Global · finals at Bett London",
+          amount: "Visibility + partner prizes", amountNote: "The world's largest EdTech startup competition",
+          quote: "“No strict stage requirement” — though special consideration goes to companies with a product in market.",
+          deadline: "2026 cycle closed 18 Sep 2026 · 2027 cycle expected ~Mar 2027, not yet announced", deadlineISO: null,
+          catch: "Idea-stage can apply when the 2027 cycle opens, but a product in market is preferred. India semifinal partner: Ingenious Faces.",
+          verify: "official", url: "https://gesawards.io/", sortAmt: 0, noEquity: true },
+        { name: "QDB Pre-Accelerator (Qatar)", status: "watch", type: "Pre-accelerator", region: "Qatar · Doha (hybrid)",
+          amount: "Up to $75,000", amountNote: "Investment · 8-week hybrid program, accommodation covered",
+          quote: "Open to early-stage startups with an MVP or early-stage product.",
+          deadline: "Opened for 2026 — exact deadline not published; could not confirm still open on 18 Oct 2026", deadlineISO: null,
+          catch: "MVP-ish minimum — not pure idea stage. You must be willing to establish and operate from Qatar. Second-hand (DealBeat, Aug 2026).",
+          verify: "second", url: "https://www.qbic.qa/en/applications", sortAmt: 75000 },
+        { name: "QDB Pre-Seed Investment (Qatar)", status: "watch", type: "Fund", region: "Qatar",
+          amount: "QAR 250,000 (~$68.6K)", amountNote: "Sharia-compliant convertible note",
+          quote: "For post-ideation companies inside QDB's incubation / acceleration portfolio.",
+          deadline: "Via QDB portfolio programs", deadlineISO: null,
+          catch: "You generally need to be in a QDB incubator/accelerator first — pair with the Pre-Accelerator above, and operate from Qatar.",
+          verify: "official", url: "https://www.qdb.qa/financing-and-funding/equity-and-investment/pre-seed-funding", sortAmt: 68600 },
+        { name: "QSTP Incubation (Qatar)", status: "watch", type: "Incubator", region: "Qatar · Doha",
+          amount: "Incubation", amountNote: "Fall 2026 cohort: 52 startups (25 local + 27 international, incl. EdTech)",
+          quote: "Qatar Science & Technology Park's revamped incubation program takes international startups.",
+          deadline: "Fall 2026 cohort began 1 Sep 2026 — closed; watch for the next intake", deadlineISO: null,
+          catch: "Cohort-based; next intake dates not yet published. Second-hand (Qatar Day, 17 Oct 2026).",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "Soma Capital Fellowship", status: "watch", type: "Fellowship", region: "Global · remote",
+          amount: "$100,000", amountNote: "Via uncapped SAFE, reported 0% equity · no program fee · 6 weeks–3 months, fully remote",
+          quote: "“Pre-seed / idea stage to early traction” — best suited to technical founders with high-potential ideas (AI, B2B SaaS, deep tech).",
+          deadline: "Current 2026 cohort status not confirmed", deadlineISO: null,
+          catch: "Terms come from a third-party listing (Jun 2026); no live application page could be verified on Soma's own site. Treat as unverified until Soma confirms.",
+          verify: "second", url: null, sortAmt: 100000 },
+        { name: "Seedcamp", status: "open", type: "Pre-seed fund", region: "UK · London / Europe",
+          amount: "€100K–€200K initial", amountNote: "Pre-seed and seed checks · invests “from day one”",
+          quote: "Seedcamp backs founders from day one, at pre-seed and seed.",
+          deadline: "Rolling — verify current terms at seedcamp.com", deadlineISO: null,
+          catch: "Europe-centric deal flow — but it explicitly welcomes strong ideas at the pre-product stage. Terms second-hand; verify on Seedcamp's own site.",
+          verify: "second", url: "https://seedcamp.com", sortAmt: 82000 },
+        { name: "Pioneer Fund", status: "watch", type: "Pre-seed fund", region: "Global",
+          amount: "Early-stage checks", amountNote: "Amounts not publicly standardized · decisions reported within ~48 hours of meeting",
+          quote: "A fund of 400+ YC alumni, geographically agnostic — “we invest in strong founders no matter where they are located.”",
+          deadline: "Rolling — inbound / warm intros", deadlineISO: null,
+          catch: "No public application portal — and in practice it primarily invests in Y Combinator companies. Best reached after YC admission or through the alumni network. Not related to the shut-down Pioneer.app.",
+          verify: "second", url: null, sortAmt: 0 },
+
+        /* ---------------- RULED OUT ---------------- */
+        { name: "Pioneer.app", anchor: "closed", status: "closed", ended: "2024", type: "Tournament accelerator", region: "Was global · remote",
+          amount: "No longer investing", amountNote: "Stopped making new investments in 2024",
+          quote: "Pioneer's own site: “We stopped making new investments in 2024.”",
+          deadline: "Closed", deadlineISO: null,
+          catch: "Aggregator sites still list it as open — those listings are stale. Do not pay anyone offering Pioneer applications. Not the same as Pioneer Fund (watch list).",
+          verify: "official", url: "https://pioneer.app", sortAmt: 0 },
+        { name: "WISE EdTech Accelerator 2026–27", anchor: "ruledout", status: "out", type: "Accelerator", region: "Qatar",
+          amount: "Support · no stated cash", amountNote: "4–6 International Track startups · ~5% acceptance",
+          quote: "Open globally — but requires a beyond-MVP product with evidence of sales or engagement.",
+          deadline: "31 Oct 2026 — but not eligible at idea stage", deadlineISO: "2026-10-31",
+          catch: "Ruled out for now: traction is required. Revisit once the learning platform has users. Details second-hand.",
+          verify: "second", url: "https://www.wise-qatar.org", sortAmt: 0 },
+        { name: "EIT AI Entrepreneurs Lab", status: "out", type: "Venture lab", region: "EU",
+          amount: "Up to 5 × €10K prizes", amountNote: "Possible ≤1% SAFE for winners · in-person bootcamp 9–13 Nov 2026",
+          quote: "Genuinely idea-stage: “an AI-driven idea… or a recently incorporated startup at pre-market launch stage.”",
+          deadline: "21 Oct 2026 — but India not eligible", deadlineISO: "2026-10-21",
+          catch: "Ruled out: applicants must reside in / be established in EU member states or selected associated countries. India is not eligible.",
+          verify: "official", url: null, sortAmt: 10000 },
+        { name: "TinySeed", status: "out", type: "Fund", region: "Global · remote-first",
+          amount: "Bootstrapper-friendly checks", amountNote: "Program fee applies only after acceptance, deducted from the investment",
+          quote: "“It is very unlikely that we will invest in companies that are pre-revenue or idea-stage. Applications from companies without revenue will be denied.”",
+          deadline: "Spring 2027 applications open Feb 2027", deadlineISO: null,
+          catch: "Ruled out until you have revenue — a good fit later for a profitable SaaS.",
+          verify: "official", url: "http://tinyseed.com/latest/application-preview", sortAmt: 0 },
+        { name: "Calm Company Fund", status: "out", type: "Fund", region: "Global",
+          amount: "Shared Earnings Agreement", amountNote: "Invests via revenue-share style terms",
+          quote: "Invests after a product has launched — not at idea stage.",
+          deadline: "Rolling — after launch", deadlineISO: null,
+          catch: "Ruled out for now; relevant once a product exists and is earning. Details second-hand.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "Parallel18 (Puerto Rico)", status: "watch", type: "Accelerator", region: "Puerto Rico",
+          amount: "$100,000 SAFE", amountNote: "Per company — Gen 14 (Oct 2026) invested $1.5M across 15 startups from 8 countries",
+          quote: "Puerto Rico's accelerator and investment platform, open to global applicants.",
+          deadline: "Generation-based cohorts · Gen 14 selected Oct 2026", deadlineISO: null,
+          catch: "Historically idea-to-prototype, but recent cohorts skew toward launched products — check the current generation's stage bar before applying. Details second-hand.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "Freshmango Accelerator", status: "out", type: "Accelerator", region: "EU / UK / US only",
+          amount: "Equity-free · €4M+ perks", amountNote: "4-month, fully remote, pre-seed/seed",
+          quote: "An equity-free remote accelerator — for founders in the EU, UK or US.",
+          deadline: "—", deadlineISO: null,
+          catch: "Ruled out: India-based founders are outside its eligible regions. Details second-hand.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "TAQADAM (KAUST, Saudi Arabia)", status: "out", type: "Accelerator", region: "Saudi Arabia · hybrid",
+          amount: "$40K–$140K non-dilutive", amountNote: "$40K for teams continuing past the bootcamp; up to $140K total non-dilutive, with zero-equity follow-on possible",
+          quote: "KAUST describes TAQADAM two conflicting ways — its program pages say it is “for ideas that are pushing the boundaries of technology”, while its official FAQ demands a completed MVP.",
+          deadline: "Annual cycle · register interest when the call is closed", deadlineISO: null,
+          catch: "Conflicting official info — both versions: (1) idea-stage welcome, per KAUST's program pages; (2) “All early stage startups (Pre-seed to Series A) with a completed MVP are welcome,” per the official FAQ. Until KAUST clarifies, assume an MVP is required. At least 2 team members must attend activities, international startups need a Saudi expansion plan within a year, and founders must be 18+.",
+          verify: "official", url: "https://taqadam.kaust.edu.sa", sortAmt: 40000, noEquity: true },
+        { name: "Hult Prize", status: "out", type: "Competition", region: "Global · student campuses",
+          amount: "$1,000,000", amountNote: "Seed prize for the winning student team",
+          quote: "Idea-stage friendly — but a student competition, teams of 2–4.",
+          deadline: "2026 cycle closed (Feb 2026) · 2027 TBD", deadlineISO: null,
+          catch: "Ruled out unless you are an enrolled student: students only. Details second-hand.",
+          verify: "second", url: "https://hultprize.org", sortAmt: 1000000, noEquity: true },
+        { name: "Afore Grants (micro-grants)", status: "out", type: "Micro-grant", region: "North America only",
+          amount: "$1,000", amountNote: "Equity-free · one-question application · rolling",
+          quote: "Micro-grants for builders aged 21 or younger in North America.",
+          deadline: "Rolling — wrong region", deadlineISO: null,
+          catch: "Ruled out: North America only, and 21-or-under. Listed for completeness; Afore Alpha (open list) is the applicable Afore route. Details second-hand.",
+          verify: "second", url: null, sortAmt: 1000, noEquity: true },
+        { name: "EIC Accelerator (EU)", status: "out", type: "Grant + equity", region: "EU",
+          amount: "Large EU grants", amountNote: "For TRL 6–8 technologies",
+          quote: "A flagship EU program — for companies well past the idea stage.",
+          deadline: "—", deadlineISO: null,
+          catch: "Ruled out: requires technology at TRL 6–8 and an EU entity. Not an idea-stage route.",
+          verify: "second", url: null, sortAmt: 0 },
+
+        /* ---------------- USA — FELLOWSHIPS, STUDENT FUNDS & MORE ---------------- */
+        { name: "South Park Commons — Founder Fellowship", status: "open", type: "Fellowship", region: "USA · SF / NYC + India · Bangalore",
+          amount: "≈$1M per team", amountNote: "$400K upfront for 7% equity + $600K guaranteed in your next external round + up to $1M in credits",
+          quote: "“The only program in the world built specifically for the −1 to 0 phase” — pre-revenue, pre-product and even pre-idea founders.",
+          deadline: "Spring & Fall cohorts · Fall 2026 applications opened summer 2026", deadlineISO: null,
+          catch: "Highly selective and aimed at technical builders; in-person in San Francisco, New York or Bangalore. Distinct from SPC's free residency (also listed).",
+          verify: "second", url: "https://southparkcommons.com/", sortAmt: 1000000 },
+        { name: "Boost VC Fellowship", status: "open", type: "Fellowship", region: "USA",
+          amount: "$50,000", amountNote: "Fast, conviction-based capital for technical founders",
+          quote: "“Designed for founders at the idea or zero-to-one stage… pre-company or extremely early… you may not have a product yet.”",
+          deadline: "Rolling (2025–26 rounds reported)", deadlineISO: null,
+          catch: "Technical founders only — deep tech, AI, crypto and frontier focus. Details second-hand.",
+          verify: "second", url: null, sortAmt: 50000 },
+        { name: "776 Fellowship (Alexis Ohanian)", status: "open", type: "Fellowship", region: "Global · US-based",
+          amount: "$100,000", amountNote: "Over 2 years, for young builders",
+          quote: "A two-year fellowship backing young people building ambitious things.",
+          deadline: "Reported active — check the current round", deadlineISO: null,
+          catch: "Aimed at young founders. Details second-hand — verify the current round before relying on them.",
+          verify: "second", url: null, sortAmt: 100000 },
+        { name: "Dorm Room Fund (First Round)", status: "open", type: "Pre-seed fund", region: "USA · campus hubs",
+          amount: "$40K–$250K", amountNote: "Equity checks · student-run fund backed by First Round Capital",
+          quote: "Students investing in students — idea-stage is fine if you're enrolled.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Students only — you must be enrolled. Campus hubs: Bay Area, New York, Boston, Philadelphia.",
+          verify: "second", url: null, sortAmt: 250000 },
+        { name: "Neo Scholars", status: "open", type: "Fellowship", region: "USA · San Francisco",
+          amount: "$25,000", amountNote: "Equity-free · one semester",
+          quote: "A semester off for technical undergraduates to build something real.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Undergraduates only; semester-off commitment; San Francisco-based.",
+          verify: "second", url: null, sortAmt: 25000, noEquity: true },
+        { name: "Contrary Capital", status: "open", type: "Pre-seed fund", region: "USA · university-focused",
+          amount: "Student pre-seed checks", amountNote: "Backs students and recent graduates at idea stage",
+          quote: "A university-focused pre-seed fund built around campus talent.",
+          deadline: "Rolling (reported)", deadlineISO: null,
+          catch: "Low verification: terms were not confirmed in this research — re-check everything on Contrary's own site before relying on it.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "Rough Draft Ventures (General Catalyst)", status: "open", type: "Pre-seed fund", region: "USA · Boston / campuses",
+          amount: "Campus founder backing", amountNote: "General Catalyst's student-founder program",
+          quote: "Backs student founders at the idea stage, on campus.",
+          deadline: "Rolling (reported)", deadlineISO: null,
+          catch: "Low verification: current terms were not confirmed in this research — verify before relying on them.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "Founder Institute", status: "open", type: "Accelerator", region: "Global · 200+ cities",
+          amount: "No cash — charges a fee", amountNote: "Entrance fee $399–$699 + a 2.5% warrant (dilutes only if you raise)",
+          quote: "“Requires no relocation, no co-founder, and no prior traction — ~60% of each cohort is solo-founded.”",
+          deadline: "Rolling cohorts by city", deadlineISO: null,
+          catch: "Fee-charging: you pay to join and receive no investment. Legitimate and running since 2009 — but read the warrant terms carefully before signing.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "Y Combinator Fellowship", status: "closed", ended: "2017", type: "Fellowship", region: "Was USA · remote",
+          amount: "$20K for 1.5% (later terms)", amountNote: "First batch took equity-free grants; from Jan 2016, $20K for 1.5% on a convertible that only converted on an IPO or $100M+ event",
+          quote: "Y Combinator's remote fellowship for the very earliest founders.",
+          deadline: "Ran 2015–2017 · discontinued", deadlineISO: null,
+          catch: "Closed: YC wound the fellowship down in 2016–17, judging it would not scale, and replaced it with the free Startup School MOOC.",
+          verify: "second", url: null, sortAmt: 20000 },
+        { name: "On Deck (ODX)", status: "closed", ended: "2022", type: "Accelerator", region: "Was USA",
+          amount: "$125K for 7% (ODX)", amountNote: "The ODX accelerator backed 150 companies",
+          quote: "A founder community and accelerator for people starting their next thing.",
+          deadline: "Ran 2019–2022 · wound down", deadlineISO: null,
+          catch: "Closed: after failing to close a planned $100–150M fund, On Deck laid off most of its staff in 2022 and sunsetted its founder communities.",
+          verify: "second", url: null, sortAmt: 125000 },
+        { name: "AI Grant (Nat Friedman & Daniel Gross)", status: "closed", ended: "~2024", type: "Grant", region: "Was global",
+          amount: "$250,000", amountNote: "For AI founders and researchers · rolling while it ran",
+          quote: "A grant and investment vehicle for AI builders, run by two of the best-known angel investors in AI.",
+          deadline: "Ran ~2017–2024 · likely ended", deadlineISO: null,
+          catch: "Status unclear: presumed ended — superseded by the NFDG fund, and both founders joined Meta in 2025 — but no official closure notice could be verified. Treat as ended unless the site says otherwise.",
+          verify: "low", url: null, sortAmt: 250000 },
+
+        /* ---------------- CANADA ---------------- */
+        { name: "NEXT AI (NEXT Canada)", status: "open", type: "Accelerator", region: "Canada · Toronto / Montréal",
+          amount: "$100K–$250K (reported)", amountNote: "Capital + mentorship + education; the investment figure is third-party reporting",
+          quote: "“We identify talented idea or early-stage teams with ambitious AI solutions.”",
+          deadline: "Applications open 15 Oct – 9 Dec 2026", deadlineISO: "2026-12-09",
+          catch: "AI-focused, Canadian program (Toronto and Montréal streams). Confirm the investment terms on the official page.",
+          verify: "official", url: "http://www.nextcanada.com/programs-overview/", sortAmt: 250000 },
+        { name: "Creative Destruction Lab (CDL)", status: "watch", type: "Accelerator", region: "Canada + 15 global sites",
+          amount: "No fee · no equity", amountNote: "9-month objectives-based mentoring program (Oct–Jun); no cash attached",
+          quote: "For “seed-stage, science- and technology-based companies… best suited for ventures beyond the concept stage that plan to raise a seed round within 12 months.”",
+          deadline: "Applications open in spring (Apr–Jun) · main deadline ~late July", deadlineISO: null,
+          catch: "Deep-tech and science ventures; concept-stage accepted, but the bar is a credible plan to raise a seed round. Sites include Toronto, Vancouver, Paris, Berlin, London, Melbourne and Doha.",
+          verify: "second", url: "https://creativedestructionlab.com", sortAmt: 0, noEquity: true },
+        { name: "NEXT 36 (NEXT Canada)", status: "watch", type: "Accelerator", region: "Canada",
+          amount: "No cash stated", amountNote: "8 months of education, mentorship and network",
+          quote: "“For students or recent grads… you will go from ideation to launch and beyond, all within eight months.”",
+          deadline: "2026 window ran 13 Aug – 14 Oct 2026 · next cycle expected 2027", deadlineISO: null,
+          catch: "Students and recent graduates only.",
+          verify: "official", url: "http://www.nextcanada.com/programs-overview/", sortAmt: 0, noEquity: true },
+        { name: "FounderFuel", status: "watch", type: "Accelerator", region: "Canada · Montréal",
+          amount: "Accelerator backing", amountNote: "Pre-revenue companies with a strong team accepted",
+          quote: "Montréal's accelerator for pre-revenue teams.",
+          deadline: "Cohort-based — check the current call", deadlineISO: null,
+          catch: "Second-hand listing only — confirm terms and dates on FounderFuel's own site.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "DMZ — Pre-Incubation (Toronto)", status: "watch", type: "Incubator", region: "Canada · Toronto",
+          amount: "No cash", amountNote: "Pre-incubation stream at Toronto Metropolitan University's DMZ",
+          quote: "DMZ's pre-incubation is “open to very early founders with an idea.”",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Note: DMZ's full accelerator program ended in Dec 2024; the incubator and pre-incubation streams continue. Support, not funding.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+
+        /* ---------------- LATIN AMERICA ---------------- */
+        { name: "Wayra (Telefónica)", status: "open", type: "Accelerator", region: "LatAm + Spain / Germany / UK",
+          amount: "~$50K–$250K", amountNote: "Current tickets ~$50–250K; historic idea-stage tickets were $30K–$70K",
+          quote: "Global calls are “open to all entrepreneurs with an innovative idea.”",
+          deadline: "Rolling global calls", deadlineISO: null,
+          catch: "Tech and digital focus; a fit with Telefónica's strategy helps. Terms vary by country hub (Colombia, Mexico, Argentina, Brazil, Chile, Peru, Venezuela + Europe).",
+          verify: "second", url: null, sortAmt: 250000 },
+        { name: "Fondo Emprender (SENA)", status: "open", type: "Government scheme", region: "Colombia",
+          amount: "Up to ~COP 100M", amountNote: "Government seed capital per project (2025 reporting)",
+          quote: "Colombia's national seed-capital fund for business-plan-stage founders.",
+          deadline: "Regional calls — active in 2026", deadlineISO: null,
+          catch: "Colombian eligibility: aimed at SENA students, graduates and apprentices, with a business plan.",
+          verify: "second", url: null, sortAmt: 25000, noEquity: true },
+        { name: "Startup Perú (ProInnóvate)", status: "watch", type: "Government grant", region: "Peru",
+          amount: "Pre-seed grants", amountNote: "Grants with co-financing for dynamic and innovative startups",
+          quote: "Peru's public startup grant program — idea-to-MVP historically.",
+          deadline: "Periodic calls", deadlineISO: null,
+          catch: "Requires a Peruvian legal entity. Low-medium verification — confirm the current call's stage requirements.",
+          verify: "low", url: null, sortAmt: 0, noEquity: true },
+        { name: "iNNpulsa Colombia", status: "watch", type: "Government grant", region: "Colombia",
+          amount: "Up to ~COP 500M (historical)", amountNote: "Historically matched private investment up to ~COP 500M",
+          quote: "Colombia's entrepreneurship agency runs grant and co-financing calls.",
+          deadline: "Call-dependent", deadlineISO: null,
+          catch: "Idea-stage fit varies by call. Low verification — read the specific call before assuming eligibility.",
+          verify: "low", url: null, sortAmt: 120000 },
+        { name: "APPS.CO (MinTIC)", status: "closed", ended: "~2019", type: "Government scheme", region: "Was Colombia",
+          amount: "Was idea-stage support", amountNote: "Colombia's flagship early-stage tech program in the 2010s",
+          quote: "The program that seeded a generation of Colombian tech startups.",
+          deadline: "Ran as an idea-stage program until ~2019", deadlineISO: null,
+          catch: "Closed as an idea-stage route: APPS.CO pivoted around 2019 to growth-stage international expansion (with Seedstars). Listed for historical completeness.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "Rockstart LatAm", status: "closed", ended: "~2019", type: "Accelerator", region: "Was Colombia · Bogotá",
+          amount: "Was seed acceleration", amountNote: "Rockstart's Latin American arm",
+          quote: "Rockstart's Bogotá accelerator for Latin American startups.",
+          deadline: "Closed ~2019", deadlineISO: null,
+          catch: "Closed: Rockstart refocused on Europe around 2019. Low verification — treat the end year as approximate.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "Startup Brasil", status: "closed", ended: "~2016", type: "Government scheme", region: "Was Brazil",
+          amount: "Was federal startup support", amountNote: "Federal program of the 2013–2016 era",
+          quote: "Brazil's federal startup acceleration program.",
+          deadline: "Ran ~2013–2016", deadlineISO: null,
+          catch: "Closed. Low verification on the exact end year — listed for historical completeness.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "Fondo Semilla", status: "closed", ended: "~2018", type: "Government scheme", region: "Was Argentina",
+          amount: "Idea-stage honor loans", amountNote: "Seed loans for the earliest founders",
+          quote: "Argentina's seed-loan program for idea-stage entrepreneurs.",
+          deadline: "Discontinued ~2018", deadlineISO: null,
+          catch: "Closed. Low verification — end year approximate.",
+          verify: "low", url: null, sortAmt: 0 },
+
+        /* ---------------- EUROPE ---------------- */
+        { name: "EWOR — Ideation Fellowship", status: "open", type: "Fellowship", region: "Germany · Berlin / global virtual",
+          amount: "Up to €300,000", amountNote: "Ideation track: €65K via EWOR GmbH + up to €235K via its Luxembourg fund; 3% equity “tuition” if they invest. Traction track: €500K",
+          quote: "“The EWOR Ideation Fellowship is built for founders who haven't yet hit early traction… from pre-idea, no company, no co-founder or no traction through validation and prototype.”",
+          deadline: "Rolling — no batches (~35–40 fellows a year from 35,000+ applications)", deadlineISO: null,
+          catch: "Extremely selective (~0.1%). You must incorporate within 18 months of acceptance, and not every Ideation fellow receives investment.",
+          verify: "official", url: "https://www.ewor.com", sortAmt: 325000 },
+        { name: "EXIST Gründungsstipendium", status: "open", type: "Government grant", region: "Germany",
+          amount: "Up to €3,000/month × 12", amountNote: "Stipend by qualification (€3,000 PhD / €2,500 graduates / €2,000 vocational / €1,000 students) + €150 per child + up to €30K equipment + €5K coaching",
+          quote: "“From an idea to a market-ready startup” — for innovative ideas from science and research.",
+          deadline: "Rolling, via university startup networks", deadlineISO: null,
+          catch: "You need a university or research link (students, graduates within 5 years, researchers); max 3 founders; innovative tech or knowledge-based ideas only.",
+          verify: "official", url: "https://exist.de", sortAmt: 66000, noEquity: true },
+        { name: "EXIST Research Transfer", status: "open", type: "Government grant", region: "Germany",
+          amount: "Up to €250K + €180K", amountNote: "Phase I up to €250K over 18 months; Phase II up to €180K grant",
+          quote: "For highly innovative, research-based projects, before a company exists.",
+          deadline: "Deadlines 31 Mar / 31 Aug / 30 Nov each year", deadlineISO: null,
+          catch: "Research-based deep tech only, anchored at a university or institute. Details second-hand — confirm on exist.de.",
+          verify: "second", url: null, sortAmt: 465000, noEquity: true },
+        { name: "EIT Jumpstarter", status: "open", type: "Competition", region: "EU · RIS countries",
+          amount: "Up to €10,000", amountNote: "Prizes + travel grants · no equity",
+          quote: "“Targets early-stage ideas that have not yet been turned into fully developed businesses or startups.”",
+          deadline: "Annual call", deadlineISO: null,
+          catch: "Only for applicants in EIT RIS countries — much of Central, Eastern and Southern Europe plus associated countries (incl. Ukraine and Türkiye). Western-European and non-EU founders are mostly out.",
+          verify: "official", url: null, sortAmt: 11000, noEquity: true },
+        { name: "Venture Kick", status: "open", type: "Competition", region: "Switzerland",
+          amount: "CHF 10K → 150K+", amountNote: "CHF 10K grant → CHF 40K convertible loan → CHF 100K over 9 months; stage-2 winners eligible for a CHF 150K InnoBooster grant; stage-3 access to up to CHF 850K via Kickfund",
+          quote: "For founders “developing a highly innovative business idea” — you must be pre-company: no employees, no commercial revenue, no professional investors.",
+          deadline: "Rolling — no fixed deadlines", deadlineISO: null,
+          catch: "A founder must be affiliated (now, or within 6 months) with a Swiss academic institution, and the company must be established in Switzerland.",
+          verify: "official", url: "https://venturekick.ch", sortAmt: 160000 },
+        { name: "Bourse French Tech (Bpifrance)", status: "open", type: "Government grant", region: "France",
+          amount: "€10K–€30K", amountNote: "Grant for idea validation, feasibility studies and prototyping",
+          quote: "For very-early founders validating a business idea.",
+          deadline: "Rolling via Bpifrance", deadlineISO: null,
+          catch: "A France-based project is expected. Details second-hand — confirm amounts on Bpifrance.",
+          verify: "second", url: null, sortAmt: 32500, noEquity: true },
+        { name: "French Tech Émergence (Bpifrance)", status: "open", type: "Government grant", region: "France",
+          amount: "Up to €90,000", amountNote: "Grant for technical and economic validation before company creation (deeptech / tech)",
+          quote: "Pre-creation validation funding for technology founders.",
+          deadline: "Rolling via Bpifrance", deadlineISO: null,
+          catch: "Deeptech and tech only, at the pre-creation stage. Details second-hand — verify on Bpifrance.",
+          verify: "second", url: null, sortAmt: 97000, noEquity: true },
+        { name: "EuraTechnologies Incubation", status: "watch", type: "Incubator", region: "France · Lille / Roubaix",
+          amount: "Free — no fees", amountNote: "Fully funded incubation; no equity stated",
+          quote: "“For early-stage founders, at the ideation or launch stage, who haven't registered their company yet. With or without an MVP.”",
+          deadline: "Oct 2026 batch: applications closed 15 Sep 2026 · next batch expected", deadlineISO: null,
+          catch: "You must set up in the Hauts-de-France region.",
+          verify: "official", url: "https://www.euratechnologies.com/en/startup-programs", sortAmt: 0, noEquity: true },
+        { name: "iF Pioneers (Hamburg)", status: "open", type: "Incubator", region: "Germany · Hamburg",
+          amount: "No cash", amountNote: "3-month ideation → validation → prototype pre-incubation (Hamburg Startup Factory)",
+          quote: "“You do not necessarily need to have your own startup idea.”",
+          deadline: "Active in 2026", deadlineISO: null,
+          catch: "For students and young professionals around Hamburg; mentoring and network, not funding.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "NEOTEC (CDTI)", status: "out", type: "Government grant", region: "Spain",
+          amount: "Up to €250,000", amountNote: "Non-repayable grant for innovative technology companies",
+          quote: "Spain's flagship grant for technology-based companies.",
+          deadline: "Annual calls", deadlineISO: null,
+          catch: "Ruled out at pure idea stage: you must first incorporate an innovative company in Spain.",
+          verify: "second", url: null, sortAmt: 270000, noEquity: true },
+        { name: "The Family", status: "closed", ended: "~2023", type: "Accelerator", region: "Was France · Paris",
+          amount: "Was startup support + community", amountNote: "Influential Paris support organisation (2013–2023)",
+          quote: "For a decade, The Family was a centre of gravity for French startup founders.",
+          deadline: "Shut down ~2023", deadlineISO: null,
+          catch: "Closed amid financial difficulties. Low verification — end year approximate.",
+          verify: "low", url: null, sortAmt: 0 },
+
+        /* ---------------- UK ---------------- */
+        { name: "Bethnal Green Ventures (BGV)", status: "open", type: "Accelerator", region: "UK · London",
+          amount: "£60,000 for 7%", amountNote: "+ a 6-week intensive program; follow-on up to £1M",
+          quote: "“Anyone with a tech for good idea can apply… you might be at the very beginning of your startup journey.” No warm intro needed.",
+          deadline: "Autumn 2026 programme — applications open now", deadlineISO: null,
+          catch: "Tech-for-good only (Sustainable Planet / Healthy Lives / Inclusive Society), with a £100–200M enterprise-value ambition bar.",
+          verify: "official", url: "https://bethnalgreenventures.com", sortAmt: 76000 },
+        { name: "Zinc", status: "open", type: "Company builder", region: "UK · London",
+          amount: "Up to £300,000", amountNote: "Per venture + a 9-month mission-led venture-building program",
+          quote: "“Invests at the earliest stages, often when founders are pre-idea and pre-team.”",
+          deadline: "Mission cohorts — recruiting", deadlineISO: null,
+          catch: "Mission-led only (health, environment, social resilience) and you must incorporate in the UK. Terms flagged low-verification — re-check on Zinc's own site.",
+          verify: "low", url: null, sortAmt: 380000 },
+        { name: "Innovate UK Smart Grants", status: "open", type: "Government grant", region: "UK",
+          amount: "£25K–£500K+", amountNote: "Grant covers up to 70% of eligible project costs for micro/small businesses — match funding required",
+          quote: "For UK SMEs with a “great idea” for an R&D project, in any sector.",
+          deadline: "Quarterly competitions", deadlineISO: null,
+          catch: "You must be a UK-registered business; grants are paid against project costs and are highly competitive.",
+          verify: "second", url: null, sortAmt: 630000, noEquity: true },
+        { name: "Innovate UK Fast Start: Innovation", status: "watch", type: "Government grant", region: "UK",
+          amount: "Up to £50,000", amountNote: "For “highly innovative ideas”; themed rounds (recent: net zero, self-driven healthcare) share a £30M pot",
+          quote: "“Have a great idea… develop both your idea and your business.”",
+          deadline: "Competitions open periodically", deadlineISO: null,
+          catch: "Themed rounds — your idea must fit the current theme; UK-registered applicants.",
+          verify: "second", url: null, sortAmt: 63000, noEquity: true },
+        { name: "UK Start Up Loans (British Business Bank)", status: "open", type: "Government loan", region: "UK",
+          amount: "£500–£25,000", amountNote: "Personal business loans at ~6% interest + 12 months of mentoring",
+          quote: "For UK founders whose business has traded for under 36 months — including pre-launch.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "It's a loan, not a grant: you repay it with interest. UK resident, 18+, with the right to work in the UK.",
+          verify: "second", url: null, sortAmt: 31000, noEquity: true },
+
+        /* ---------------- MIDDLE EAST ---------------- */
+        { name: "Flat6Labs", status: "open", type: "Accelerator", region: "Egypt · Saudi · UAE · Tunisia · Jordan · Bahrain · Lebanon · Morocco",
+          amount: "SAR ~500K (Riyadh) · AED 500K–1M (Abu Dhabi, reported)", amountNote: "4-month seed programs; equity terms vary by program (historically ~10–15%)",
+          quote: "Markets itself as taking founders “from idea to investor-ready.”",
+          deadline: "Rolling cycles — 2026 includes the Egypt PropTech Challenge, Ignite Morocco and the 4th Riyadh Seed cycle", deadlineISO: null,
+          catch: "Terms are program-specific, and you relocate to the program city for the cycle.",
+          verify: "second", url: "https://flat6labs.com", sortAmt: 270000 },
+        { name: "Tnufa — Ideation Incentive Program", status: "open", type: "Government grant", region: "Israel",
+          amount: "Up to NIS 200,000", amountNote: "Conditional grant covering 80% of an approved budget over 12 months (Israel Innovation Authority)",
+          quote: "“Designed for fledgling entrepreneurs to develop and validate innovative technological concepts.”",
+          deadline: "Open year-round", deadlineISO: null,
+          catch: "Repayable through royalties once the product sells — but you don't need to quit your job or give up rights to the idea to apply.",
+          verify: "official", url: "http://innovationisrael.org.il/en/programs/ideation-tnufa-incentive-program/", sortAmt: 54000, noEquity: true },
+        { name: "Hub71 — Initiate (Abu Dhabi)", status: "open", type: "Incubator", region: "UAE · Abu Dhabi",
+          amount: "No direct cash", amountNote: "Licensing, office space and venture-builder support; a pathway into Hub71 Access",
+          quote: "“Supports founders at the ideation and pre-seed stages… validate ideas, develop business models.”",
+          deadline: "Open — expanded in 2026 after attracting 5,500 applications", deadlineISO: null,
+          catch: "Abu Dhabi base; the value is support, setup and ecosystem access rather than a check.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "100 Dreams (UAE)", status: "watch", type: "Grant", region: "UAE",
+          amount: "$10,000 × 100 founders", amountNote: "+ a 6-week accelerator and company-setup support (National Media Authority + 1 Billion Followers Summit)",
+          quote: "“Empowering promising concepts to move beyond the ideation stage.”",
+          deadline: "Applications open 20 Nov 2026 · funding distributed at the summit, 8–10 Jan 2027", deadlineISO: null,
+          catch: "Content and creator-economy businesses; you establish the company in the UAE.",
+          verify: "second", url: null, sortAmt: 10000, noEquity: true },
+        { name: "Sanabil Accelerator by Orbit", status: "watch", type: "Accelerator", region: "Saudi Arabia · Riyadh",
+          amount: "$80K–$100K", amountNote: "Per startup; equity terms undisclosed",
+          quote: "Riyadh batch accelerator run by Sanabil Investments with Orbit Startups.",
+          deadline: "Batch 5 applications closed 1 Oct 2026 · watch for Batch 6", deadlineISO: null,
+          catch: "Borderline idea-stage: expects MVP / market-validation work, and you must be in Riyadh for weeks 1–4 and 8–12 of the program.",
+          verify: "second", url: null, sortAmt: 100000 },
+        { name: "Oasis500", status: "watch", type: "Pre-seed fund", region: "Jordan",
+          amount: "~JOD 20–30K (historical)", amountNote: "Historically idea-stage tech investment + training",
+          quote: "Jordan's long-running seed investor for technology ideas.",
+          deadline: "Status for 2026 unconfirmed", deadlineISO: null,
+          catch: "Low verification: current activity and terms were not confirmed in this research — verify before relying on it.",
+          verify: "low", url: null, sortAmt: 35000 },
+        { name: "QSTP XLR8 (Qatar)", status: "watch", type: "Accelerator", region: "Qatar",
+          amount: "Mentorship + PoC support", amountNote: "Idea-stage mentoring and proof-of-concept support; historically small grants",
+          quote: "Qatar Science & Technology Park's accelerator for turning ideas and research into prototypes.",
+          deadline: "Cohort-based — verify the current call", deadlineISO: null,
+          catch: "Low verification of the current round — check QSTP's site before planning around it.",
+          verify: "low", url: null, sortAmt: 0 },
+
+        /* ---------------- AFRICA ---------------- */
+        { name: "Tony Elumelu Foundation (TEF) Programme", status: "watch", type: "Grant", region: "Pan-Africa · all 54 countries",
+          amount: "$5,000 seed capital", amountNote: "Non-refundable + 12 weeks of online training, mentorship and an alumni network; $100M+ disbursed to 18,000+ entrepreneurs since 2015",
+          quote: "“Must have a business idea or an existing business” — idea-stage is explicitly fine.",
+          deadline: "2026 cycle ran 1 Jan – 1 Mar 2026 · 2027 cycle expected to open 1 Jan 2027", deadlineISO: null,
+          catch: "Extremely competitive (~1.2% acceptance in 2026 reporting). African citizens or legal residents, 18+, with the business based in Africa. TEF has never charged an application fee — anyone asking for one is a scammer (see the avoid list).",
+          verify: "second", url: "https://tonyelumelufoundation.org", sortAmt: 5000, noEquity: true },
+        { name: "Antler — Africa (Lagos · Nairobi)", status: "open", type: "Residency + VC", region: "Nigeria · Kenya",
+          amount: "$100,000 for 10%", amountNote: "8-week in-person sprint, roughly twice a year",
+          quote: "“No co-founder, company, or idea required at application” — solo founders OK.",
+          deadline: "Rolling residencies (~twice yearly)", deadlineISO: null,
+          catch: "In-person in Lagos or Nairobi for the sprint.",
+          verify: "second", url: "https://www.antler.co/apply", sortAmt: 100000 },
+        { name: "AFRISE Challenge 2026", status: "open", type: "Competition", region: "Nigeria · Uganda · Morocco · Kenya · Rwanda · Ghana · Côte d'Ivoire · Senegal",
+          amount: "Funding + $600K+ in credits", amountNote: "Accelerator for 30 founders; the top 15 reach a virtual demo day for grant/equity funding (Concordia University + Hindsight Ventures)",
+          quote: "“Idea stage: napkin-stage ideas are accepted — having a prototype or early traction is preferable.”",
+          deadline: "2026 challenge open", deadlineISO: null,
+          catch: "Founders aged 18–35 in the eight listed countries.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "MEST Africa — Training Program", status: "closed", ended: "~2020", type: "Accelerator", region: "Was Ghana · Accra (pan-African)",
+          amount: "Was training + seed", amountNote: "Flagship model: a 12-month fully-sponsored training program + seed investment for graduating teams",
+          quote: "For over a decade, MEST trained and seeded software entrepreneurs from across Africa.",
+          deadline: "Flagship training program ended ~2020", deadlineISO: null,
+          catch: "Closed as a training program: MEST continues as an investor. Its Africa Challenge pitch competition ($50K equity prize) was last active in 2020 — current status unverified.",
+          verify: "second", url: null, sortAmt: 50000 },
+
+        /* ---------------- INDIA ---------------- */
+        { name: "NIDHI-PRAYAS (DST)", status: "open", type: "Government grant", region: "India",
+          amount: "Up to ₹10 lakh", amountNote: "Grant for a prototype / proof-of-concept, over up to 18 months — via designated PRAYAS Centres at incubators",
+          quote: "“Individual innovators without a startup” can apply — Indian citizen, 18+, pre-company OK; students and researchers too (with an NOC).",
+          deadline: "Rolling calls at PRAYAS Centres", deadlineISO: null,
+          catch: "You apply through a PRAYAS Centre, not centrally. Most centres exclude pure software / app-only / e-commerce projects — the money funds a physical or tech prototype, not salary or rent.",
+          verify: "second", url: "https://nidhi.dst.gov.in", sortAmt: 12000, noEquity: true },
+        { name: "BIRAC BIG — Biotechnology Ignition Grant", status: "open", type: "Government grant", region: "India",
+          amount: "Up to ₹50 lakh", amountNote: "Over 18 months, milestone-linked (DBT / BIRAC)",
+          quote: "“Ideation to proof-of-concept… if you have any idea or a device prototype, BIG is ideal.” Individual innovators are eligible.",
+          deadline: "Periodic calls (~19 held since 2012)", deadlineISO: null,
+          catch: "Biotech and life-sciences only. You must incubate at a BIRAC partner incubator or have a functional R&D lab; promoters of LLPs are excluded.",
+          verify: "official", url: "https://birac.nic.in", sortAmt: 60000, noEquity: true },
+        { name: "Antler India — ARC", status: "open", type: "Pre-seed fund", region: "India · Bangalore",
+          amount: "Up to $500,000", amountNote: "ARC: a $250K pre-seed first cheque “often purely at a concept stage”, plus up to $250K more within 9 months matching 50% of an external raise",
+          quote: "“We commit to investing up to $500K in idea-stage companies, on a rolling basis… without the requirement of a product or traction.”",
+          deadline: "Rolling (ARC + residencies) · Embark US-market program writes a $450K lead cheque", deadlineISO: null,
+          catch: "Bangalore residencies run alongside ARC; the follow-on half needs an external raise for Antler to match.",
+          verify: "official", url: "https://www.antler.co/apply", sortAmt: 500000 },
+        { name: "NIDHI-EIR (Entrepreneur-in-Residence)", status: "open", type: "Fellowship", region: "India",
+          amount: "₹10K–₹30K / month", amountNote: "Fellowship for 12 months (extendable to 18; max ₹3.6L) + office space and mentoring, via NIDHI-TBIs (DST)",
+          quote: "Explicitly pre-company: “You may not be an incubatee at the time of application.”",
+          deadline: "Open via NIDHI-TBI incubators", deadlineISO: null,
+          catch: "One-time only; after selection you incubate at the executing TBI.",
+          verify: "official", url: null, sortAmt: 4300, noEquity: true },
+        { name: "MeitY TIDE 2.0", status: "open", type: "Government grant", region: "India",
+          amount: "₹4–7 lakh (idea → PoC)", amountNote: "The EiR stage funds idea validation; the grant takes a PoC to an MVP; later product/market stages reach up to ₹40L",
+          quote: "TIDE 2.0's EiR stage exists specifically for idea validation in ICT, electronics and emerging tech.",
+          deadline: "Open via TIDE 2.0 incubation centres", deadlineISO: null,
+          catch: "Only through empanelled incubation centres; ICT / electronics / emerging-tech scope.",
+          verify: "second", url: null, sortAmt: 8000, noEquity: true },
+        { name: "NEEV Startup Kickstart Pre-Incubation", status: "open", type: "Incubator", region: "India · Kolkata",
+          amount: "Equity-free pre-incubation", amountNote: "Mentoring, labs and investor readiness (IMI Kolkata / IKN Innovation Foundation)",
+          quote: "“No specific registration requirement… welcomes ideas from student founders and early innovators, even those who are not yet formally incorporated.”",
+          deadline: "2026 cohort open", deadlineISO: null,
+          catch: "Kolkata-based pre-incubation; support and readiness rather than a check.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "Startin UP (Uttar Pradesh)", status: "open", type: "Government grant", region: "India · Uttar Pradesh",
+          amount: "₹4.5–5 lakh (observed)", amountNote: "State seed / prototype / marketing grants; similar idea-stage schemes run in Karnataka, Telangana, Maharashtra, Gujarat, Tamil Nadu and Kerala",
+          quote: "Uttar Pradesh's startup-policy grants for prototype-stage founders.",
+          deadline: "Active — state portal calls", deadlineISO: null,
+          catch: "State policy eligibility applies; amounts are as observed in state reporting, not a guaranteed entitlement.",
+          verify: "second", url: null, sortAmt: 6000, noEquity: true },
+        { name: "Startup India Seed Fund Scheme (SISFS)", status: "out", type: "Government grant", region: "India",
+          amount: "₹20L grant + ₹50L debt", amountNote: "Via empanelled incubators (DPIIT)",
+          quote: "Government seed support for proof of concept, prototype development and product trials.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Ruled out at pure idea stage: it requires DPIIT recognition — i.e., an incorporated company first. A first stop right after you incorporate.",
+          verify: "second", url: "https://seedfund.startupindia.gov.in", sortAmt: 84000, noEquity: true },
+        { name: "Atal New India Challenge (ANIC)", status: "watch", type: "Government grant", region: "India",
+          amount: "Up to ₹1 crore (reported)", amountNote: "Challenge grants for idea-stage tech innovations (AIM, NITI Aayog)",
+          quote: "Challenge grants for technology innovations aimed at national problem statements.",
+          deadline: "Current round unverified", deadlineISO: null,
+          catch: "Low verification on the current round — check AIM's site for live challenges before applying.",
+          verify: "low", url: null, sortAmt: 120000, noEquity: true },
+        { name: "MSME Idea Hackathon", status: "watch", type: "Government grant", region: "India",
+          amount: "Idea-stage grants", amountNote: "Ministry of MSME hackathon grants, routed through host institutes",
+          quote: "A national idea hackathon that funds selected raw ideas.",
+          deadline: "Editions run via host institutes", deadlineISO: null,
+          catch: "You apply through a host institute when an edition opens; themes and amounts vary by edition.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "Villgro", status: "watch", type: "Incubator", region: "India · Chennai / Bangalore",
+          amount: "Seed funding + incubation", amountNote: "For early- and idea-stage social enterprises",
+          quote: "One of India's oldest social-enterprise incubators.",
+          deadline: "Cohort-based", deadlineISO: null,
+          catch: "Social-impact sectors only. Low verification on current terms — check Villgro's site.",
+          verify: "low", url: null, sortAmt: 0 },
+
+        /* ---------------- PAKISTAN · BANGLADESH · SRI LANKA ---------------- */
+        { name: "Plan9 (PITB)", status: "open", type: "Incubator", region: "Pakistan · Lahore",
+          amount: "No cash — free incubation", amountNote: "6-month incubation + mentorship; equity-free (Punjab IT Board)",
+          quote: "Punjab's flagship tech incubator for pre-revenue product teams.",
+          deadline: "Active — 2026 cycles run via “The Launchpad”", deadlineISO: null,
+          catch: "Pakistani citizens, 18+; a mockup, wireframe or prototype is required; minimum 2-member team (CEO + CTO); founders full-time during the cycle; tech products only.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "National Incubation Centres (NICs)", status: "open", type: "Incubator", region: "Pakistan · Islamabad / Karachi / Lahore / Quetta / Peshawar / Hyderabad",
+          amount: "No direct cash", amountNote: "Government-backed incubation + mentorship across Pakistan's major cities",
+          quote: "Pakistan's national network of startup incubation centres.",
+          deadline: "Rolling cohorts", deadlineISO: null,
+          catch: "Support and space rather than funding; availability varies by city centre.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "iDEA Project (ICT Division)", status: "open", type: "Government grant", region: "Bangladesh",
+          amount: "Pre-seed grants", amountNote: "Government pre-seed grants for idea-stage startups",
+          quote: "Bangladesh's government pre-seed grant program for raw ideas.",
+          deadline: "Cohort-based", deadlineISO: null,
+          catch: "Bangladesh-based founders; rounds run through the ICT Division. Details second-hand.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "Smart Bangladesh Accelerator", status: "open", type: "Accelerator", region: "Bangladesh",
+          amount: "Acceleration + support", amountNote: "Government accelerator with an early-stage track for idea-stage founders",
+          quote: "The Smart Bangladesh accelerator takes founders at the idea stage.",
+          deadline: "Cohort-based", deadlineISO: null,
+          catch: "Details second-hand — confirm the current cohort's terms before applying.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "Grameenphone Accelerator", status: "open", type: "Accelerator", region: "Bangladesh",
+          amount: "Grants + resources · no equity", amountNote: "Corporate accelerator run by Grameenphone",
+          quote: "Bangladesh's best-known corporate accelerator for early teams.",
+          deadline: "Cohort-based", deadlineISO: null,
+          catch: "Bangladesh focus; cohort timing varies. Details second-hand.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "Startup Bangladesh Limited", status: "watch", type: "Pre-seed fund", region: "Bangladesh",
+          amount: "Pre-seed to growth equity", amountNote: "The government's venture arm (ICT Division); idea-stage pre-seed is considered",
+          quote: "The state's venture fund for Bangladeshi startups.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "A government fund's diligence pace; idea-stage is considered but is not the core mandate.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "Spiralation (ICTA)", status: "watch", type: "Government grant", region: "Sri Lanka",
+          amount: "Idea-stage ICT seed funding (reported)", amountNote: "Seed support from Sri Lanka's ICT Agency",
+          quote: "ICTA's seed program for Sri Lankan ICT ideas.",
+          deadline: "Unverified for 2026", deadlineISO: null,
+          catch: "Low verification — confirm Spiralation is currently running before applying.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "PlanX (PITB)", status: "closed", ended: "~2021", type: "Accelerator", region: "Was Pakistan · Lahore",
+          amount: "Was tech acceleration", amountNote: "PITB's accelerator, sibling of Plan9",
+          quote: "Lahore's PITB-run accelerator for tech startups.",
+          deadline: "Closed ~2021", deadlineISO: null,
+          catch: "Closed. Low verification — end year approximate.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "Venture Engine", status: "closed", ended: "~2019", type: "Competition", region: "Was Sri Lanka",
+          amount: "Was a pitch competition", amountNote: "Sri Lanka's flagship startup pitch competition",
+          quote: "The competition that showcased Sri Lanka's startup scene through the 2010s.",
+          deadline: "Last active ~2019", deadlineISO: null,
+          catch: "Closed. Low verification — end year approximate.",
+          verify: "low", url: null, sortAmt: 0 },
+
+        /* ---------------- SOUTHEAST ASIA ---------------- */
+        { name: "Startup SG Founder (Enterprise Singapore)", status: "open", type: "Government grant", region: "Singapore",
+          amount: "S$20,000–S$50,000", amountNote: "1:1 matching with the founder's own capital + 12 months of mentorship via an Accredited Mentor Partner",
+          quote: "For “first-time entrepreneurs with innovative business concepts.”",
+          deadline: "Open — you apply through an AMP, not directly", deadlineISO: null,
+          catch: "The primary applicant must be a first-time founder, a Singapore citizen/PR, hold ≥30% equity, work full-time and not be employed elsewhere; the company must be ≤6 months old with ≥51% local shareholding.",
+          verify: "official", url: "http://grants.sg/grants/startup-sg-founder", sortAmt: 37000, noEquity: true },
+        { name: "Startup SG Tech (Enterprise Singapore)", status: "open", type: "Government grant", region: "Singapore",
+          amount: "S$250K–S$1M", amountNote: "Proof-of-concept grants up to S$250–500K; proof-of-value up to S$500K–1M; ~70% co-funding",
+          quote: "For “technology ideas at conceptualisation stage.”",
+          deadline: "Open", deadlineISO: null,
+          catch: "Must be a Singapore-registered company (<5 years old) with ≥30% local shareholding and proprietary, breakthrough technology.",
+          verify: "second", url: null, sortAmt: 740000, noEquity: true },
+        { name: "Cradle — CIP Spark / CIP Sprint (Malaysia)", status: "open", type: "Government grant", region: "Malaysia",
+          amount: "Up to ~RM150,000 (reported)", amountNote: "CIP Spark: conditional development grant over 18 months, open to individuals, companies and LLPs. CIP Sprint: conditional convertible commercialisation grant for companies",
+          quote: "Malaysia's Cradle Fund backs idea-stage individuals directly — no company needed for Spark.",
+          deadline: "Periodic approvals (28 CIP Spark/Sprint approvals totalling RM8.24M reported)", deadlineISO: null,
+          catch: "Malaysian applicants; conditional-grant terms apply — read the repayment and conversion conditions carefully.",
+          verify: "second", url: "https://cradle.com.my", sortAmt: 32000 },
+        { name: "IdeaSpace (Philippines)", status: "open", type: "Accelerator", region: "Philippines",
+          amount: "Up to ₱500,000", amountNote: "Non-equity grants + accelerator (backed by the First Pacific / MVP group); 13 cohorts through 2026",
+          quote: "The Philippines' longest-running idea-stage tech accelerator.",
+          deadline: "Annual cohorts — the 2026 cohort has run", deadlineISO: null,
+          catch: "Tech focus; Philippines-based teams.",
+          verify: "second", url: null, sortAmt: 9000, noEquity: true },
+        { name: "QBO Innovation Hub", status: "watch", type: "Incubator", region: "Philippines",
+          amount: "No equity · incubation", amountNote: "Idea-stage incubation (DTI-backed)",
+          quote: "Manila's hub for taking ideas to startups.",
+          deadline: "Rolling programs", deadlineISO: null,
+          catch: "Support rather than funding; details second-hand.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "VIISA", status: "watch", type: "Accelerator", region: "Vietnam",
+          amount: "~$15K–$30K (reported)", amountNote: "For idea- and early-stage teams",
+          quote: "Vietnam's early accelerator for idea-stage founders.",
+          deadline: "Cohort-based — verify the current batch", deadlineISO: null,
+          catch: "Low verification — amounts are reported, not confirmed.",
+          verify: "low", url: null, sortAmt: 30000 },
+        { name: "Gerakan 1001 Digital Startup", status: "watch", type: "Incubator", region: "Indonesia",
+          amount: "No cash — bootcamps + incubation", amountNote: "Workshops, hackathons and 3-month incubation for ideation-stage startups across 34 provinces (Ministry of Communication & Digital)",
+          quote: "Indonesia's national movement for ideation-stage digital startups.",
+          deadline: "Active per OECD 2025 · 2026 status unverified", deadlineISO: null,
+          catch: "Low verification for 2026 — check the ministry's current programming.",
+          verify: "low", url: null, sortAmt: 0, noEquity: true },
+        { name: "MaGIC (Malaysia)", status: "closed", ended: "2021", type: "Accelerator", region: "Was Malaysia",
+          amount: "Was ~RM200K programs (reported)", amountNote: "Legacy idea-stage programs (e.g. MAP) of the Malaysian Global Innovation & Creativity Centre",
+          quote: "Malaysia's flagship startup agency through the 2010s.",
+          deadline: "Ended 2021 · merged into MRANTI", deadlineISO: null,
+          catch: "Closed as an agency: MaGIC was merged into MRANTI in 2021 and its legacy programs ended. Successor programs run under MRANTI.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "DTAC Accelerate", status: "closed", ended: "2020", type: "Accelerator", region: "Was Thailand · Bangkok",
+          amount: "Was telco acceleration", amountNote: "DTAC's Bangkok accelerator",
+          quote: "Thailand's best-known corporate accelerator of the 2010s.",
+          deadline: "Closed 2020", deadlineISO: null,
+          catch: "Closed. Low verification — listed for historical completeness.",
+          verify: "low", url: null, sortAmt: 0 },
+
+        /* ---------------- EAST ASIA ---------------- */
+        { name: "Samurai Incubate", status: "watch", type: "Pre-seed fund", region: "Japan · Tokyo",
+          amount: "Pre-seed investment", amountNote: "Tokyo pre-seed investor that considers idea-stage founders",
+          quote: "Samurai Incubate backs founders from the seed of an idea.",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Low verification on current idea-stage terms — confirm directly with the firm.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "500 Kobe (500 Global)", status: "closed", ended: "~2019", type: "Accelerator", region: "Was Japan · Kobe",
+          amount: "Was 500 Global acceleration", amountNote: "500 Startups' city program in Kobe",
+          quote: "500's Japanese city accelerator of the late 2010s.",
+          deadline: "Ended ~2019", deadlineISO: null,
+          catch: "Closed. Low verification — end year approximate.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "NDRC (Ireland)", status: "closed", ended: "2021", type: "Accelerator", region: "Was Ireland",
+          amount: "Was state-backed acceleration", amountNote: "Ireland's national startup accelerator",
+          quote: "Ireland's national accelerator for early-stage founders.",
+          deadline: "Wound down 2021", deadlineISO: null,
+          catch: "Closed: NDRC's mandate ended in 2021. Low verification — included from the research summary; re-check before citing.",
+          verify: "low", url: null, sortAmt: 0 },
+
+        /* ---------------- OCEANIA ---------------- */
+        { name: "Antler — Australia", status: "open", type: "Residency + VC", region: "Australia · Sydney / Melbourne / Brisbane",
+          amount: "AU$260,000 for 12%", amountNote: "8-week residencies (Feb & Jul) + a rolling-capital guarantee if you raise ≥AU$300K from others in year 1; a program fee applies per third-party reporting",
+          quote: "“Designed specifically for people at the inception stage: pre-idea, pre-product, and pre-team.”",
+          deadline: "Applications open for the next residency", deadlineISO: null,
+          catch: "In-person Australian residencies; check the program-fee deduction in the current terms.",
+          verify: "official", url: "https://www.antler.co/apply", sortAmt: 170000 },
+        { name: "AirTree Frontier", status: "open", type: "Residency", region: "Australia",
+          amount: "$250,000", amountNote: "On an uncapped, no-discount SAFE; rolling residency with weekly in-person Fridays and no demo day",
+          quote: "“Pre-idea founders welcome.”",
+          deadline: "Rolling", deadlineISO: null,
+          catch: "Australia-based, with in-person Fridays. Details second-hand.",
+          verify: "second", url: null, sortAmt: 250000 },
+        { name: "EnergyLab — Climate Solutions Accelerator", status: "open", type: "Accelerator", region: "Australia",
+          amount: "AU$80K–$100K", amountNote: "Cash at last-round valuation (or an AU$1M pre-money default)",
+          quote: "Australia's climate-tech accelerator takes any stage, including idea.",
+          deadline: "Cohort-based — recruiting", deadlineISO: null,
+          catch: "Climate tech only.",
+          verify: "second", url: null, sortAmt: 60000 },
+        { name: "Remarkable Tech", status: "open", type: "Accelerator", region: "Australia",
+          amount: "AU$100,000 for 5%", amountNote: "Accelerator for disability, health and ageing technology",
+          quote: "Early-stage accelerator for tech that improves the lives of people with disability.",
+          deadline: "Cohort-based", deadlineISO: null,
+          catch: "Sector-specific: disability, health and ageing tech only. Details second-hand.",
+          verify: "second", url: null, sortAmt: 65000 },
+        { name: "Tupu Accelerator", status: "open", type: "Accelerator", region: "New Zealand",
+          amount: "Free · 0% equity", amountNote: "8-week accelerator for Māori founders",
+          quote: "A kaupapa Māori accelerator for indigenous founders at idea stage.",
+          deadline: "Cohort-based", deadlineISO: null,
+          catch: "For Māori founders in New Zealand. Details second-hand.",
+          verify: "second", url: null, sortAmt: 0, noEquity: true },
+        { name: "muru-D (Telstra)", status: "closed", ended: "2020", type: "Accelerator", region: "Was Australia · Sydney",
+          amount: "Was Telstra-backed acceleration", amountNote: "Telstra's accelerator (2013–2020)",
+          quote: "Australia's best-known corporate accelerator of the 2010s.",
+          deadline: "Closed ~2020", deadlineISO: null,
+          catch: "Closed when Telstra wound the program down. The end year is flagged for re-checking.",
+          verify: "second", url: null, sortAmt: 0 },
+        { name: "BlueChilli", status: "closed", ended: "2021", type: "Company builder", region: "Was Australia · Sydney",
+          amount: "Was venture building", amountNote: "Sydney venture builder and accelerator",
+          quote: "A venture builder that paired non-technical founders with a product team.",
+          deadline: "Collapsed 2021", deadlineISO: null,
+          catch: "Closed. Low verification — treat the year as approximate.",
+          verify: "low", url: null, sortAmt: 0 },
+        { name: "Lightning Lab", status: "closed", ended: "~2023", type: "Accelerator", region: "Was New Zealand · Wellington",
+          amount: "Was national acceleration", amountNote: "New Zealand's flagship accelerator",
+          quote: "The accelerator that anchored New Zealand's startup scene for a decade.",
+          deadline: "Reported closed ~2023", deadlineISO: null,
+          catch: "Closed. Low verification — end year approximate.",
+          verify: "low", url: null, sortAmt: 0 }
+      ];
+
+      var TYPES = ["Accelerator", "Grant", "Fellowship", "Pre-seed fund", "Competition", "Residency", "Government", "Incubator", "Company builder"];
+      var state = { status: "all", types: new Set(), noEquity: false, q: "", sort: "deadline" };
+
+      function esc(s) {
+        return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      }
+      function daysLeft(iso) {
+        if (!iso) return null;
+        var now = new Date(); now.setHours(0, 0, 0, 0);
+        var d = new Date(iso + "T00:00:00");
+        return Math.round((d - now) / 86400000);
+      }
+      function daysText(iso) {
+        var n = daysLeft(iso);
+        if (n === null) return "";
+        if (n < 0) return "closed";
+        if (n === 0) return "today";
+        if (n === 1) return "1 day left";
+        return n + " days left";
+      }
+
+      /* ---------- deadline strip ---------- */
+      (function buildDeadlines() {
+        var dated = PROGRAMS.filter(function (p) { return p.deadlineISO && p.status !== "out" && p.status !== "closed"; })
+          .sort(function (a, b) { return a.deadlineISO < b.deadlineISO ? -1 : 1; });
+        var row = document.getElementById("dl-row");
+        row.innerHTML = dated.map(function (p) {
+          var n = daysLeft(p.deadlineISO);
+          var d = new Date(p.deadlineISO + "T00:00:00");
+          var label = d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+          var approx = /expected/i.test(p.deadline) ? " (expected)" : "";
+          return '<span class="dl-chip' + (n !== null && n <= 21 ? " urgent" : "") + '">' +
+            '<span class="when">' + label + approx + '</span>' +
+            '<span>' + esc(p.name.split(" — ")[0].split(" (")[0]) + '</span>' +
+            '<span class="days">' + daysText(p.deadlineISO) + '</span></span>';
+        }).join("");
+      })();
+
+      /* ---------- counts / stats ---------- */
+      (function counts() {
+        var c = { all: PROGRAMS.length, open: 0, watch: 0, out: 0, closed: 0, noEquity: 0 };
+        PROGRAMS.forEach(function (p) {
+          c[p.status]++;
+          if (p.noEquity) c.noEquity++;
+        });
+        document.querySelectorAll("[data-count]").forEach(function (el) {
+          el.textContent = c[el.getAttribute("data-count")];
+        });
+        document.getElementById("stat-total").textContent = c.all;
+        document.getElementById("stat-open").textContent = c.open;
+        document.getElementById("stat-noequity").textContent = c.noEquity;
+        document.getElementById("stat-watch").textContent = c.watch;
+        document.getElementById("stat-closed").textContent = c.closed;
+      })();
+
+      /* ---------- type chips ---------- */
+      (function typeChips() {
+        var host = document.getElementById("type-chips");
+        TYPES.forEach(function (t) {
+          var b = document.createElement("button");
+          b.type = "button"; b.className = "chip"; b.textContent = t;
+          b.setAttribute("aria-pressed", "false");
+          b.addEventListener("click", function () {
+            if (state.types.has(t)) { state.types.delete(t); b.setAttribute("aria-pressed", "false"); }
+            else { state.types.add(t); b.setAttribute("aria-pressed", "true"); }
+            render();
+          });
+          host.appendChild(b);
+        });
+      })();
+
+      /* ---------- filters wiring ---------- */
+      document.querySelectorAll(".seg button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          state.status = b.getAttribute("data-status");
+          document.querySelectorAll(".seg button").forEach(function (x) {
+            x.setAttribute("aria-pressed", x === b ? "true" : "false");
+          });
+          render();
+        });
+      });
+      document.getElementById("noequity-toggle").addEventListener("click", function () {
+        state.noEquity = !state.noEquity;
+        this.setAttribute("aria-pressed", state.noEquity ? "true" : "false");
+        render();
+      });
+      document.getElementById("search").addEventListener("input", function () {
+        state.q = this.value.trim().toLowerCase();
+        render();
+      });
+      document.getElementById("sort").addEventListener("change", function () {
+        state.sort = this.value;
+        render();
+      });
+
+      /* ---------- render ---------- */
+      function typeMatch(p) {
+        if (!state.types.size) return true;
+        var pt = p.type.toLowerCase();
+        var hit = false;
+        state.types.forEach(function (t) { if (pt.indexOf(t.toLowerCase()) !== -1) hit = true; });
+        return hit;
+      }
+      function filtered() {
+        var list = PROGRAMS.filter(function (p) {
+          if (state.status !== "all" && p.status !== state.status) return false;
+          if (!typeMatch(p)) return false;
+          if (state.noEquity && !p.noEquity) return false;
+          if (state.q) {
+            var hay = (p.name + " " + p.type + " " + p.region + " " + p.amount + " " + p.quote + " " + p.catch).toLowerCase();
+            if (hay.indexOf(state.q) === -1) return false;
+          }
+          return true;
+        });
+        if (state.sort === "deadline") {
+          list.sort(function (a, b) {
+            if (a.deadlineISO && b.deadlineISO) return a.deadlineISO < b.deadlineISO ? -1 : 1;
+            if (a.deadlineISO) return -1;
+            if (b.deadlineISO) return 1;
+            return a.name.localeCompare(b.name);
+          });
+        } else if (state.sort === "amount") {
+          list.sort(function (a, b) { return b.sortAmt - a.sortAmt; });
+        } else {
+          list.sort(function (a, b) { return a.name.localeCompare(b.name); });
+        }
+        return list;
+      }
+
+      function cardHTML(p) {
+        var dl = daysText(p.deadlineISO);
+        var soon = p.deadlineISO && daysLeft(p.deadlineISO) !== null && daysLeft(p.deadlineISO) <= 21 && daysLeft(p.deadlineISO) >= 0;
+        var anchor = p.anchor ? ' id="' + p.anchor + '"' : "";
+        var foot;
+        if (!p.url) {
+          foot = '<span class="no-link">No public application page</span>';
+        } else if (p.status === "closed") {
+          foot = '<a class="apply-btn dead" href="' + esc(p.url) + '" target="_blank" rel="noopener">Program site →</a>';
+        } else {
+          foot = '<a class="apply-btn" href="' + esc(p.url) + '" target="_blank" rel="noopener" data-apply data-name="' + esc(p.name) + '">Apply / official site →</a>';
+        }
+        var vClass = p.verify === "official" ? "" : (p.verify === "low" ? "low" : "second");
+        var vLabel = p.verify === "official" ? "Official site" : (p.verify === "low" ? "Low verification · re-check" : "Second-hand · verify");
+        return '<article class="card' + (p.status === "out" ? " is-out" : "") + (p.status === "closed" ? " is-closed" : "") + '"' + anchor + '>' +
+          '<div class="card-top"><span class="status-dot ' + p.status + '"></span><h3>' + esc(p.name) + '</h3></div>' +
+          '<div class="tags"><span class="tag">' + esc(p.type) + '</span><span class="tag">' + esc(p.region) + '</span>' +
+            (p.ended ? '<span class="tag closedtag">Closed · ended ' + esc(p.ended) + '</span>' : "") +
+            (p.noEquity ? '<span class="tag noequity">No equity</span>' : "") + '</div>' +
+          '<div class="amount">' + esc(p.amount) + '<small>' + esc(p.amountNote) + '</small></div>' +
+          '<p class="quote">' + esc(p.quote) + '</p>' +
+          '<div class="meta">' +
+            '<div class="row"><span class="k">' + (p.status === "closed" ? "Status" : "Deadline") + '</span><span class="v dl-badge' + (soon ? " soon" : "") + '">' + esc(p.deadline) + (dl && p.status !== "out" && p.status !== "closed" ? ' · ' + dl : "") + '</span></div>' +
+            '<div class="row"><span class="k">The catch</span><span class="v catch">' + esc(p.catch) + '</span></div>' +
+          '</div>' +
+          '<div class="card-foot"><span class="verify ' + vClass + '">' + vLabel + '</span>' + foot + '</div>' +
+        '</article>';
+      }
+
+      function adInfeedHTML() {
+        return '<div class="ad-slot ad-infeed" data-ad-slot="infeed" role="complementary" aria-label="Advertisement">' +
+          '<span class="ad-label">Advertisement</span><span class="ad-note">Your ad here — in-feed</span></div>';
+      }
+
+      function render() {
+        var list = filtered();
+        var grid = document.getElementById("grid");
+        if (!list.length) {
+          grid.innerHTML = '<div class="empty-state"><b>No programs match those filters</b>Try clearing the search, or switch the status tab back to “All”.</div>';
+        } else {
+          var html = "";
+          list.forEach(function (p, i) {
+            html += cardHTML(p);
+            if (i === 5 && list.length > 8) html += adInfeedHTML();
+          });
+          grid.innerHTML = html;
+        }
+        document.getElementById("result-count").textContent =
+          "Showing " + list.length + " of " + PROGRAMS.length + " programs";
+        activateAds();
+      }
+
+      /* ---------- AdSense activation ----------
+         With a publisher ID set, load the AdSense library once and turn
+         every .ad-slot into a live responsive ad unit. Without one,
+         slots stay as clearly-labelled reserved ad space. */
+      var adsLoaded = false;
+      function activateAds() {
+        if (!ADSENSE_PUBLISHER_ID) return;
+        if (!adsLoaded) {
+          adsLoaded = true;
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + ADSENSE_PUBLISHER_ID;
+          s.crossOrigin = "anonymous";
+          document.head.appendChild(s);
+        }
+        document.querySelectorAll(".ad-slot:not([data-ad-done])").forEach(function (slot) {
+          slot.setAttribute("data-ad-done", "1");
+          slot.innerHTML = "";
+          var ins = document.createElement("ins");
+          ins.className = "adsbygoogle";
+          ins.style.display = "block";
+          ins.setAttribute("data-ad-client", ADSENSE_PUBLISHER_ID);
+          ins.setAttribute("data-ad-format", "auto");
+          ins.setAttribute("data-full-width-responsive", "true");
+          slot.appendChild(ins);
+          try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+        });
+      }
+
+      /* ---------- apply interstitial ----------
+         Clicking any Apply button shows the ad interstitial first;
+         after a short countdown the official site opens in a new tab
+         (or the now-unlocked Continue button opens it, if the browser
+         blocked the automatic open). */
+      var gate = document.getElementById("gate");
+      var gateName = document.getElementById("gate-name");
+      var gateGo = document.getElementById("gate-go");
+      var gateTimer = null, gateTarget = null, gateLastFocus = null;
+      var GATE_SECONDS = 5;
+
+      function openGate(name, url, trigger) {
+        gateTarget = url;
+        gateLastFocus = trigger || null;
+        gateName.textContent = name;
+        gateGo.setAttribute("href", url);
+        gate.hidden = false;
+        document.body.style.overflow = "hidden";
+        activateAds();
+        var left = GATE_SECONDS;
+        gateGo.classList.add("is-disabled");
+        gateGo.setAttribute("aria-disabled", "true");
+        gateGo.textContent = "Continue in " + left + "s…";
+        clearInterval(gateTimer);
+        gateTimer = setInterval(function () {
+          left--;
+          if (left > 0) {
+            gateGo.textContent = "Continue in " + left + "s…";
+            return;
+          }
+          clearInterval(gateTimer);
+          gateGo.classList.remove("is-disabled");
+          gateGo.setAttribute("aria-disabled", "false");
+          gateGo.textContent = "Continue to official site →";
+          var w = window.open(gateTarget, "_blank", "noopener");
+          if (w) closeGate();
+        }, 1000);
+        document.getElementById("gate-close").focus();
+      }
+      function closeGate() {
+        clearInterval(gateTimer);
+        gate.hidden = true;
+        document.body.style.overflow = "";
+        if (gateLastFocus && gateLastFocus.focus) gateLastFocus.focus();
+      }
+      document.addEventListener("click", function (e) {
+        var a = e.target && e.target.closest ? e.target.closest("[data-apply]") : null;
+        if (!a) return;
+        e.preventDefault();
+        openGate(a.getAttribute("data-name") || "the official site", a.href, a);
+      });
+      document.getElementById("gate-close").addEventListener("click", closeGate);
+      document.getElementById("gate-cancel").addEventListener("click", closeGate);
+      gateGo.addEventListener("click", function () { setTimeout(closeGate, 60); });
+      gate.addEventListener("click", function (e) { if (e.target === gate) closeGate(); });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !gate.hidden) closeGate();
+      });
+
+      render();
+    </script>
+  </body>
+</html>
