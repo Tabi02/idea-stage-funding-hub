@@ -1,0 +1,40 @@
+# Idea Stage Funding Hub
+
+Free public directory of startup funding programs that accept IDEA-STAGE founders: no product, no traction, no revenue, and no registered company required. Solo founders welcome.
+
+- Live site: https://tabi02.github.io/idea-stage-funding-hub/
+- Coverage: 129 programs across USA, Canada, Latin America, Europe, UK, Middle East, Africa, India, Southeast Asia, East Asia, and Oceania.
+- Status: 68 open now (with deadlines), 31 on watch list, 19 closed/historical archive.
+- 57 programs are non-dilutive (grants, no equity).
+
+## Currently open highlights (as of 18 Oct 2026)
+- Y Combinator Winter 2027 — $500K ($125K for 7% + $375K SAFE), idea-stage OK, deadline 2 Nov 2026. https://www.ycombinator.com/apply
+- Hello Tomorrow Global Challenge — no equity, EUR 200K grand prize, deadline 30 Nov 2026. https://hello-tomorrow.org/global-challenge/
+- Thiel Fellowship — $250K over 2 years, no equity, age 22 and under, deadline 31 Dec 2026.
+- Emergent Ventures — rolling grants ~$10-20K, equity-free, worldwide.
+- 1517 Fund Medici Project — rolling $1,000+ no-strings grants.
+- Antler — inception-stage, $150K for 10%, rolling, in-person residencies.
+- Entrepreneur First — pre-idea individuals, London/SF.
+- Oraseya Capital Launchpad (Dubai) — equity-free 6-month residency, idea to pre-seed, rolling.
+
+## India programs
+NIDHI-PRAYAS (INR 10L prototype grant), BIRAC BIG (INR 50L idea-to-PoC), NIDHI-EIR fellowship, TIDE 2.0, Antler India ARC (up to $500K, concept stage).
+
+## How applying works on this site
+Each program card has an Apply button that opens the program's official application page (via a short ad interstitial). Closed programs are marked with their end year. A scams section documents fake funding schemes to avoid. No legitimate program charges an application fee.
+
+## Verification
+Entries are marked official-site-confirmed or flagged for re-check. Deadlines and terms should be verified on the official program page before applying.
+
+
+
+
+
+
+
+
+
+
+
+
+
