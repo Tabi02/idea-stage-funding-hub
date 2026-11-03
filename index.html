@@ -244,7 +244,7 @@
       .ad-slot .ad-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--faint); }
       .ad-slot .ad-note { font-size: 12.5px; color: var(--faint); }
       .ad-leaderboard { min-height: 110px; margin: 26px 0 6px; }
-      .ad-rail { min-height: 280px; }
+      .ad-rail { min-height: 280px; padding: 8px 0; }
       .ad-infeed { min-height: 180px; height: 100%; }
       .ad-footer { min-height: 110px; margin: 8px 0 30px; }
       .ad-slot ins.adsbygoogle { width: 100%; }
@@ -498,10 +498,19 @@
         </aside>
       </section>
 
-      <!-- AD SLOT: leaderboard (below hero) -->
-      <div class="ad-slot ad-leaderboard" data-ad-slot="leaderboard" role="complementary" aria-label="Advertisement">
+      <!-- AD SLOT: leaderboard (below hero) — Adsterra Banner 728x90, Ad Unit 32056453 -->
+      <div class="ad-slot ad-leaderboard" data-ad-slot="leaderboard" data-ad-done="1" role="complementary" aria-label="Advertisement">
         <span class="ad-label">Advertisement</span>
-        <span class="ad-note">Your ad here — 728 × 90 leaderboard</span>
+        <script>
+          atOptions = {
+            'key' : 'c40500ea1dd420928088463c2715c492',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://bicea.org/22/c40500ea1dd420928088463c2715c492"></script>
       </div>
 
       <section class="deadlines" id="deadlines">
@@ -700,10 +709,19 @@
         </div>
 
         <aside class="rail">
-          <!-- AD SLOT: sidebar rail -->
-          <div class="ad-slot ad-rail" data-ad-slot="rail" role="complementary" aria-label="Advertisement">
+          <!-- AD SLOT: sidebar rail — Adsterra Banner 300x250, Ad Unit 32056449 -->
+          <div class="ad-slot ad-rail" data-ad-slot="rail" data-ad-done="1" role="complementary" aria-label="Advertisement">
             <span class="ad-label">Advertisement</span>
-            <span class="ad-note">Your ad here — 300 × 250</span>
+            <script>
+              atOptions = {
+                'key' : 'ce0626aab95998175ab6b70ce24f9c42',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+              };
+            </script>
+            <script src="https://bicea.org/22/ce0626aab95998175ab6b70ce24f9c42"></script>
           </div>
 
           <div class="rail-card">
@@ -736,7 +754,7 @@
       </div>
 
       <!-- AD SLOT: footer — Adsterra Banner 300x250 (moved from CreatorOne, Ad Unit 32056449) -->
-      <div class="ad-slot ad-footer" data-ad-slot="footer" role="complementary" aria-label="Advertisement">
+      <div class="ad-slot ad-footer" data-ad-slot="footer" data-ad-done="1" role="complementary" aria-label="Advertisement">
         <span class="ad-label">Advertisement</span>
         <script>
           atOptions = {
@@ -1757,8 +1775,23 @@
       }
 
       function adInfeedHTML() {
-        return '<div class="ad-slot ad-infeed" data-ad-slot="infeed" role="complementary" aria-label="Advertisement">' +
-          '<span class="ad-label">Advertisement</span><span class="ad-note">Your ad here — in-feed</span></div>';
+        /* Adsterra Banner 300x250, Ad Unit 32056449 — loaded by
+           loadAdsterraInfeed() after render, because scripts put in
+           via innerHTML do not execute. */
+        return '<div class="ad-slot ad-infeed" data-ad-slot="infeed" data-ad-done="1" role="complementary" aria-label="Advertisement">' +
+          '<span class="ad-label">Advertisement</span></div>';
+      }
+
+      function loadAdsterraInfeed() {
+        var slot = document.querySelector(".ad-infeed:not([data-adsterra-done])");
+        if (!slot) return;
+        slot.setAttribute("data-adsterra-done", "1");
+        var s1 = document.createElement("script");
+        s1.text = "atOptions = {'key' : 'ce0626aab95998175ab6b70ce24f9c42', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}};";
+        slot.appendChild(s1);
+        var s2 = document.createElement("script");
+        s2.src = "https://bicea.org/22/ce0626aab95998175ab6b70ce24f9c42";
+        slot.appendChild(s2);
       }
 
       function render() {
@@ -1776,6 +1809,7 @@
         }
         document.getElementById("result-count").textContent =
           "Showing " + list.length + " of " + PROGRAMS.length + " programs";
+        loadAdsterraInfeed();
         activateAds();
       }
 
