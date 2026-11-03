@@ -512,14 +512,22 @@
     </header>
 
     <main class="wrap" id="top">
-      <!-- AD SLOT: top — responsive banner, loaded by loadResponsiveBanner().
-           Desktop: 728x90 (Ad Unit 32056453). Mobile: 300x250 (Ad Unit
-           32056449), because a 728-wide iframe is clipped on a phone
-           screen and mobile visitors would not see the full ad.
-           First thing visible when the site opens, clearly labelled.
-           No forced click, popunder or overlay: visitors click only if they choose to. -->
+      <!-- AD SLOT: top — static 728x90 banner (Ad Unit 32056453).
+           NOTE: the responsive JS version (loadResponsiveBanner, commit
+           f322106) was live-verified empty on desktop on 3 Nov 2026 —
+           dynamic loading did not render this unit, so it was reverted
+           to the static script that was verified working on 14 Nov
+           checks. On a phone this 728-wide iframe is clipped; the
+           header 320x50, rail/in-feed/footer 300x250 slots still fit
+           phone screens. First thing visible when the site opens,
+           clearly labelled. No forced click, popunder or overlay:
+           visitors click only if they choose to. -->
       <div class="ad-slot ad-top" data-ad-slot="top" data-ad-done="1" role="complementary" aria-label="Advertisement">
         <span class="ad-label">Advertisement</span>
+        <script>
+          atOptions = {'key' : 'c40500ea1dd420928088463c2715c492', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+        </script>
+        <script src="https://bicea.org/22/c40500ea1dd420928088463c2715c492"></script>
       </div>
 
       <section class="hero">
@@ -548,12 +556,16 @@
         </aside>
       </section>
 
-      <!-- AD SLOT: leaderboard (below hero) — responsive banner, loaded
-           by loadResponsiveBanner(). Desktop: 728x90 (Ad Unit 32056453).
-           Mobile: 300x250 (Ad Unit 32056449), for the same phone-screen
-           clipping reason as the top slot. -->
+      <!-- AD SLOT: leaderboard (below hero) — static 728x90 banner
+           (Ad Unit 32056453), reverted from the responsive JS version
+           for the same reason as the top slot: dynamic loading was
+           live-verified empty on desktop on 3 Nov 2026. -->
       <div class="ad-slot ad-leaderboard" data-ad-slot="leaderboard" data-ad-done="1" role="complementary" aria-label="Advertisement">
         <span class="ad-label">Advertisement</span>
+        <script>
+          atOptions = {'key' : 'c40500ea1dd420928088463c2715c492', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};
+        </script>
+        <script src="https://bicea.org/22/c40500ea1dd420928088463c2715c492"></script>
       </div>
 
       <section class="deadlines" id="deadlines">
@@ -2000,29 +2012,9 @@
       });
       setInterval(showAdPopup, 5 * 60 * 1000);
 
-      /* ---------- responsive top / leaderboard banners ----------
-         Desktop gets the wide 728x90; a phone gets the 300x250 that
-         actually fits its screen, instead of a clipped 728-wide iframe.
-         Loaded via DOM scripts (like in-feed/gate) so only the fitting
-         size ever loads — the other size is never a hidden impression. */
-      function loadResponsiveBanner(slotName) {
-        var slot = document.querySelector('[data-ad-slot="' + slotName + '"]:not([data-adsterra-done])');
-        if (!slot) return;
-        slot.setAttribute("data-adsterra-done", "1");
-        var wide = window.innerWidth >= 768;
-        var key = wide ? "c40500ea1dd420928088463c2715c492" : "ce0626aab95998175ab6b70ce24f9c42";
-        var w = wide ? 728 : 300;
-        var h = wide ? 90 : 250;
-        var s1 = document.createElement("script");
-        s1.text = "atOptions = {'key' : '" + key + "', 'format' : 'iframe', 'height' : " + h + ", 'width' : " + w + ", 'params' : {}};";
-        slot.appendChild(s1);
-        var s2 = document.createElement("script");
-        s2.src = "https://bicea.org/22/" + key;
-        slot.appendChild(s2);
-      }
-      loadResponsiveBanner("top");
-      loadResponsiveBanner("leaderboard");
-
+      /* Top / leaderboard are static scripts in the HTML above (not
+         loaded here): the dynamic loader version was live-verified
+         empty on desktop on 3 Nov 2026, so it was removed. */
       render();
     </script>
   </body>
