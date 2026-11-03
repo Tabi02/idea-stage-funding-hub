@@ -784,9 +784,8 @@
           <button type="button" class="gate-x" id="gate-close" aria-label="Cancel and stay on this page">×</button>
         </div>
         <p class="gate-sub">This directory is free and ad-supported, so a short ad break comes first — then the program's official application page opens in a new tab.</p>
-        <div class="ad-slot gate-ad" data-ad-slot="interstitial" role="complementary" aria-label="Advertisement">
+        <div class="ad-slot gate-ad" data-ad-slot="interstitial" data-ad-done="1" role="complementary" aria-label="Advertisement">
           <span class="ad-label">Advertisement</span>
-          <span class="ad-note">Your ad here — interstitial</span>
         </div>
         <div class="gate-actions">
           <button type="button" class="chip" id="gate-cancel">Stay on this page</button>
@@ -1853,6 +1852,21 @@
       var gateTimer = null, gateTarget = null, gateLastFocus = null;
       var GATE_SECONDS = 5;
 
+      function loadAdsterraGate() {
+        /* Adsterra Banner 300x250, Ad Unit 32056449 — loaded only when
+           the gate window actually opens, never while it is hidden,
+           so no hidden impression is counted. Loaded once per page. */
+        var slot = document.querySelector(".gate-ad:not([data-adsterra-done])");
+        if (!slot) return;
+        slot.setAttribute("data-adsterra-done", "1");
+        var s1 = document.createElement("script");
+        s1.text = "atOptions = {'key' : 'ce0626aab95998175ab6b70ce24f9c42', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}};";
+        slot.appendChild(s1);
+        var s2 = document.createElement("script");
+        s2.src = "https://bicea.org/22/ce0626aab95998175ab6b70ce24f9c42";
+        slot.appendChild(s2);
+      }
+
       function openGate(name, url, trigger) {
         gateTarget = url;
         gateLastFocus = trigger || null;
@@ -1860,6 +1874,7 @@
         gateGo.setAttribute("href", url);
         gate.hidden = false;
         document.body.style.overflow = "hidden";
+        loadAdsterraGate();
         activateAds();
         var left = GATE_SECONDS;
         gateGo.classList.add("is-disabled");
