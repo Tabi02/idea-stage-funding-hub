@@ -247,7 +247,7 @@
       .ad-slot .ad-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--faint); }
       .ad-slot .ad-note { font-size: 12.5px; color: var(--faint); }
       .ad-leaderboard { min-height: 110px; margin: 26px 0 6px; }
-      .ad-top { min-height: 80px; margin: 14px 0 0; }
+      .ad-top { min-height: 110px; margin: 14px 0 0; }
       .ad-rail { min-height: 280px; padding: 8px 0; }
       .ad-infeed { min-height: 180px; height: 100%; }
       .ad-footer { min-height: 110px; margin: 8px 0 30px; }
@@ -512,21 +512,23 @@
     </header>
 
     <main class="wrap" id="top">
-      <!-- AD SLOT: top — Adsterra Banner 468x60, Ad Unit 32056448.
+      <!-- AD SLOT: top — Adsterra Banner 728x90, Ad Unit 32056453.
            First thing visible when the site opens, clearly labelled.
+           Switched from 468x60 on 3 Nov after live check showed the
+           468x60 iframe empty; 728x90 already rendered in the leaderboard.
            No forced click, popunder or overlay: visitors click only if they choose to. -->
       <div class="ad-slot ad-top" data-ad-slot="top" data-ad-done="1" role="complementary" aria-label="Advertisement">
         <span class="ad-label">Advertisement</span>
         <script>
           atOptions = {
-            'key' : 'a6045a19437f73f09a4e37e892681d82',
+            'key' : 'c40500ea1dd420928088463c2715c492',
             'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
+            'height' : 90,
+            'width' : 728,
             'params' : {}
           };
         </script>
-        <script src="https://bicea.org/22/a6045a19437f73f09a4e37e892681d82"></script>
+        <script src="https://bicea.org/22/c40500ea1dd420928088463c2715c492"></script>
       </div>
 
       <section class="hero">
