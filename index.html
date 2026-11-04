@@ -10,6 +10,9 @@
     <meta name="author" content="Idea Stage Funding Hub" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="theme-color" content="#0b6b4a" />
+    <!-- Google AdSense loader (publisher ca-pub-7723645672808324) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723645672808324"
+     crossorigin="anonymous"></script>
     <link rel="canonical" href="https://tabi02.github.io/idea-stage-funding-hub/" />
     <link rel="alternate" hreflang="en" href="https://tabi02.github.io/idea-stage-funding-hub/" />
     <link rel="alternate" hreflang="x-default" href="https://tabi02.github.io/idea-stage-funding-hub/" />
@@ -252,6 +255,9 @@
       .ad-infeed { min-height: 180px; height: 100%; }
       .ad-footer { min-height: 110px; margin: 8px 0 30px; }
       .ad-slot ins.adsbygoogle { width: 100%; }
+      .adsense-slot { border: 1.5px dashed #d6d3d1; border-radius: 12px; padding: 14px; margin: 18px 0; text-align: center; overflow: hidden; }
+      .adsense-slot .ad-label { font-family: monospace; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: #78716c; display: block; margin-bottom: 6px; }
+      .adsense-slot ins.adsbygoogle { width: 100%; }
 
       /* ---------- deadline strip ---------- */
       .deadlines { padding: 26px 0 4px; }
@@ -561,6 +567,23 @@
           <p><b>Yes.</b> Idea-stage (pre-product, pre-revenue) funding comes from accelerators such as <b>Y Combinator</b> ($500K standard deal) and <b>Antler</b>, company builders such as <b>Entrepreneur First</b>, equity-free grants such as <b>Emergent Ventures</b>, and government schemes such as India's <b>NIDHI-PRAYAS</b> (up to ₹10 lakh) and <b>BIRAC BIG</b> (up to ₹50 lakh). Of the 129 programs tracked here, <b>68 are open now</b> and <b>57 take no equity</b>. Checks range from $1,000 micro-grants to ~$1M pre-seed deals.</p>
         </aside>
       </section>
+
+      <!-- AD SLOT: Google AdSense responsive unit (ca-pub-7723645672808324 / slot 7695869526).
+           Dedicated slot: deliberately NOT class "ad-slot", so the dormant
+           activateAds() placeholder path can never overwrite it or the
+           Adsterra slots. -->
+      <div class="adsense-slot" role="complementary" aria-label="Advertisement">
+        <span class="ad-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7723645672808324"
+             data-ad-slot="7695869526"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
 
       <!-- AD SLOT: leaderboard (below hero) — static 728x90 banner
            (Ad Unit 32056453), reverted from the responsive JS version
